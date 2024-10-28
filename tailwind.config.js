@@ -21,13 +21,15 @@ export default {
         "product660x": "660px",
         "product560x": "560px",
         "product460x": "460px",
+        "product420x": "420px",
         "product380x": "380px",
         "product360x": "360px",
         "product340x": "340px",
         "product335x": "335px"
       },
       boxShadow: {
-        "topSide": "0 9px 45px 0 rgba(0,0,0,.2)"
+        "topSide": "0 9px 45px 0 rgba(0,0,0,.2)",
+        "bottomContact": "rgba(0, 0, 0, 0.24) 0px 3px 8px"
       }
     },
   },
