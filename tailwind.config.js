@@ -26,6 +26,9 @@ export default {
         "product340x": "340px",
         "product335x": "335px"
       },
+      boxShadow: {
+        "topSide": "0 9px 45px 0 rgba(0,0,0,.2)"
+      }
     },
   },
   plugins: [],
