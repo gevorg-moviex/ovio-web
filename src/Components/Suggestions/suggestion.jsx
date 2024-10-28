@@ -11,14 +11,13 @@ export default function Suggestions() {
             </div>
             <Swiper
                 slidesPerView="auto"
-                spaceBetween={-70}
                 pagination={{ clickable: false }}
                 modules={[Navigation]}
             >
                 {suggestionsAm.products.map((item) => (
                     <SwiperSlide key={item.id}>
                         <div
-                            className="relative flex justify-center bg-cover bg-center items-end h-[532px] py-8 px-7 text-white rounded-[20px] hover:-translate-y-5 transition-all duration-500 cursor-pointer w-[348px]"
+                            className="relative flex justify-center bg-cover bg-center items-end h-[532px] py-8 px-7 text-white rounded-[20px] hover:-translate-y-5 transition-all duration-500 cursor-pointer w-[348px] product970x:w-[448px]"
                             style={{ backgroundImage: `url(${item.imageUrl})` }}
                         >
                             <div className="absolute inset-0 bg-black opacity-40 rounded-[20px]" />
