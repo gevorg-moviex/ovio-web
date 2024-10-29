@@ -3,19 +3,21 @@ import './App.css'
 import Other from './Components/Other/other'
 import Cards from './Components/Cards/cards'
 import Suggestions from './Components/Suggestions/suggestion'
-import TopSide from './Components/TopSide/topside'
-import BottomContact from './BottomContact/bottomContact'
+import BottomContact from './Components/BottomContact/bottomContact'
+import Header from './Components/Header/header'
+import FirstTopSide from './Components/FirstTop/firstTopSide'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      {/* <Other /> */}
-      {/* <Cards />  */}
-      {/* <Suggestions /> */}
-      {/* <TopSide /> */}
-      {/* <BottomContact /> */}
+      <FirstTopSide />
+      <Header />
+      <Other />
+      <Cards /> 
+      <Suggestions />
+      <BottomContact />
     </>
   )
 }

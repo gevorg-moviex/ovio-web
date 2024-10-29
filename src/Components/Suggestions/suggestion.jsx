@@ -7,10 +7,11 @@ export default function Suggestions() {
     return (
         <div className="px-3 product340x:px-7 product660x:px-28">
             <div>
-                <h1 className="text-3xl font-bold">{suggestionsAm.title}</h1>
+                <h1 className="text-3xl font-bold pb-4">{suggestionsAm.title}</h1>
             </div>
             <Swiper
-                slidesPerView="auto"
+                slidesPerView={3}
+                spaceBetween={130}
                 pagination={{ clickable: false }}
                 modules={[Navigation]}
             >

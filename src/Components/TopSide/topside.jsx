@@ -31,22 +31,22 @@ export default function TopSide() {
     };
 
     return (
-        <div className="h-[52px] border-b-[0.1px] border-[#e2e2e2] flex items-center justify-between px-16">
-            <div className="flex gap-7 items-center">
+        <div className="flex my-5 items-center justify-between product640x:my-0 product640x:flex-row h-[52px] px-2 product640x:border-b-[0.1px] border-[#e2e2e2] product640x:items-center product640x:justify-between product1260x:px-16">
+            <div className="flex gap-3 items-start flex-col product640x:flex-row product640x:gap-7 product640x:items-center">
                 <div>
-                    <a href="#" className="flex gap-2 items-center">
+                    <a href="#" className="flex gap-2 items-center hover:text-[#6e35a3]">
                         <FaPhone className="text-[#858585]" />
                         <span className="text-xs">+374 60 46 46 46</span>
                     </a>
                 </div>
                 <div>
-                    <a href="#" className="flex gap-2 items-center">
+                    <a href="#" className="flex gap-2 items-center hover:text-[#6e35a3]">
                         <FaEnvelope className="text-[#858585]" />
                         <span className="text-xs">info@ovio.am</span>
                     </a>
                 </div>
                 <div>
-                    <a href="#" className="flex gap-2 items-center">
+                    <a href="#" className="flex gap-2 items-center hover:text-[#6e35a3]">
                         <FaLocationDot className="text-[#858585]" />
                         <span className="text-xs">Գրասենյակներ և ծածկույթ</span>
                     </a>

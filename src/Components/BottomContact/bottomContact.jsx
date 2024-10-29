@@ -8,8 +8,8 @@ export default function BottomContact(){
     return (
         <>
             {openModal && (
-                <div className="modal h-[480px] rounded-md pb-3 w-auto ml-4 product420x:ml-0 product420x:w-[350px] fixed right-5 bottom-24 shadow-bottomContact">
-                    <div className="flex flex-col rounded-md justify-between h-full items-center">
+                <div className="modal z-10 h-[480px] rounded-md pb-3 w-auto ml-4 product420x:ml-0 product420x:w-[350px] fixed right-5 bottom-24 shadow-bottomContact">
+                    <div className="flex flex-col rounded-md bg-white justify-between h-full items-center">
                         <div className="text-center pt-5 rounded-md bg-[#450087] w-full px-4 text-white h-[150px] relative">
                             <h4>Խնդրում ենք գրել հարցը, մեր մասնագետները հնարավորինս արագ կպատասխանեն Ձեզ</h4>
                         </div>

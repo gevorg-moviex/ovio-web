@@ -321,3 +321,23 @@ export const channelsAm = [
     }
 ]
 
+export const navLinksAm = [
+    {
+        title: "Հատուկ առաջարկներ"
+    },
+    {
+        title: "Տան համար"
+    },
+    {
+        title: "Բիզնեսի համար"
+    },
+    {
+        title: "Մեր մասին"
+    },
+    {
+        title: "Վճարել"
+    },
+    {
+        title: "Օգնություն"
+    }
+]
