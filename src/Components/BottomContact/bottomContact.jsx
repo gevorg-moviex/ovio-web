@@ -24,7 +24,7 @@ export default function BottomContact(){
                                 </button>
                             </div>
                         </div>
-                        <span className="text-xs">Powered by OVIO</span>
+                        <span className="text-xs py-2">Powered by OVIO</span>
                     </div>
                 </div>
             )}

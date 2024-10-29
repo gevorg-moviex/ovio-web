@@ -1,3 +1,5 @@
+import { FaEnvelope, FaPhone } from "react-icons/fa"
+
 export const cardsAm = {
     title: "Ինչու՞ OVIO",
     products: [
@@ -341,3 +343,102 @@ export const navLinksAm = [
         title: "Օգնություն"
     }
 ]
+
+export const footerLinksAm = {
+    partOne: [
+        {
+            title: "Տան համար",
+            path: "/for-home"
+        },
+        {
+            title: "Հատուկ առաջարկներ",
+            path: "/special-offers"
+        },
+        {
+            title: "All in փաթեթներ",
+            path: "/all-included-packages"
+        },
+        {
+            title: "Ինտերնետ",
+            path: "/internet"
+        },
+        {
+            title: "Հեռախոսակապ",
+            path: "/telephony"
+        },
+        {
+            title: "Հեռախոսային սպասարկում",
+            path: "/phone-services"
+        },
+        {
+            title: "Գրասենյակներ և ծածկույթ",
+            path: "/service-centers"
+        },
+        {
+            title: "Բիզնեսի համար",
+            path: "/for-business"
+        }
+    ],
+    partTwo: [
+        {
+            title: "Օպերատորներ",
+            path: "/operators"
+        },
+        {
+            title: "Օգնություն",
+            path: "/help"
+        },
+        {
+            title: "Պայմաններ",
+            path: "/principal-conditions"
+        },
+        {
+            title: "Արխիվ",
+            path: "/archieved-terms"
+        },
+        {
+            title: "Աշխատատեղեր",
+            path: "/vacancies"
+        },
+        {
+            title: "Այլ աշխատանքներ",
+            path: "/other"
+        },
+        {
+            title: "Այլ",
+            path: "/additional-tarrifs"
+        }
+    ],
+    options: [
+        {
+            option: "Ընտրել Նպատակը",
+            value: ""
+        },
+        {
+            option: "Բողոք",
+            value: "complaint"
+        },
+        {
+            option: "Առաջարկ",
+            value: "suggestion"
+        },
+        {
+            option: "Գոհունակություն",
+            value: "satisfaction"
+        },
+        {
+            option: "Ազդարարում",
+            value: "notification"
+        },
+    ],
+    contact: [
+        {
+            content: "+ 374 60 46 46 46",
+            icon: "<FaPhone />"
+        },
+        {
+            content: "info@ovio.am",
+            icon: "<FaEnvelope />"
+        }
+    ]
+}

@@ -17,10 +17,15 @@ export default {
         "product1220x": "1220px",
         "product1070x": "1070px",
         "product1280x": "1280px",
+        "product1190x": "1190px",
+        "product1100x": "1100px",
+        "product1064x": "1064px",
+        "product1047x": "1047px",
         "product1000x": "1000px",
         "product970x": "970px",
         "product885x": "885px",
         "product805x": "805px",
+        "product700x": "700px",
         "product660x": "660px",
         "product640x": "640px",
         "product560x": "560px",
@@ -34,6 +39,9 @@ export default {
       boxShadow: {
         "topSide": "0 9px 45px 0 rgba(0,0,0,.2)",
         "bottomContact": "rgba(0, 0, 0, 0.24) 0px 3px 8px"
+      },
+      gridAutoColumns: {
+        "3xauto": "repeat(3, auto)",
       }
     },
   },

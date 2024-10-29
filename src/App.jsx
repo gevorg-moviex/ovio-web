@@ -6,18 +6,20 @@ import Suggestions from './Components/Suggestions/suggestion'
 import BottomContact from './Components/BottomContact/bottomContact'
 import Header from './Components/Header/header'
 import FirstTopSide from './Components/FirstTop/firstTopSide'
+import Footer from './Components/Footer/footer'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <FirstTopSide />
+      {/* <FirstTopSide />
       <Header />
       <Other />
       <Cards /> 
       <Suggestions />
-      <BottomContact />
+      <BottomContact /> */}
+      <Footer />
     </>
   )
 }
