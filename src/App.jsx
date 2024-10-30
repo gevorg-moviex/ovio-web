@@ -8,21 +8,27 @@ import Header from './Components/Header/header'
 import FirstTopSide from './Components/FirstTop/firstTopSide'
 import Footer from './Components/Footer/footer'
 import Section from './Components/Section/section'
+import SuggestionsLayout from './Layouts/SuggestionsLayout'
+import Channel from './Components/Channel/channel'
+import VideoPart from './Components/VideoPart/videopart'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <FirstTopSide />
+      {/* <FirstTopSide />
       <Header />
       <Section />
       <Other />
       <Cards /> 
       <Suggestions />
       <BottomContact /> 
-      <Footer />
-     
+      <Footer /> */}
+     {/* <SuggestionsLayout /> */}
+     {/* <VideoPart />*/}
+     <Suggestions />
+     <BottomContact /> 
     </>
   )
 }

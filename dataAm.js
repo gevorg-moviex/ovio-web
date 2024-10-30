@@ -206,122 +206,121 @@ export const otherAm = [
     }
 ]
 
-export const channelsAm = [
-    {
-        title: "Լավագույն ալիքները",
-        viju: {
-            channelTitle: "viju",
-            products: [
-                {
-                    id: 1,
-                    imageUrl: "",
-                    title: "viju"
-                },
-                {
-                    id: 2,
-                    imageUrl: "",
-                    title: "viju+ Sport"
-                },
-                {
-                    id: 3,
-                    imageUrl: "",
-                    title: "viju+ Planet"
-                },
-                {
-                    id: 4,
-                    imageUrl: "",
-                    title: "viju+ Serial"
-                },
-                {
-                    id: 5,
-                    imageUrl: "",
-                    title: "viju+ Comedy"
-                },
-                {
-                    id: 6,
-                    imageUrl: "",
-                    title: "viju+ Megahit"
-                },
-                {
-                    id: 7,
-                    imageUrl: "",
-                    title: "viju+ Premiere"
-                },
-                {
-                    id: 8,
-                    imageUrl: "",
-                    title: "viju History"
-                },
-                {
-                    id: 9,
-                    imageUrl: "",
-                    title: "viju Nature"
-                },
-                {
-                    id: 10,
-                    imageUrl: "",
-                    title: "viju Explore"
-                },
-                {
-                    id: 11,
-                    imageUrl: "",
-                    title: "viju TV1000 Action"
-                },
-                {
-                    id: 12,
-                    imageUrl: "",
-                    title: "viju TV1000 Русское"
-                },
-                {
-                    id: 13,
-                    imageUrl: "",
-                    title: "Da Vinci"
-                }
+export const channelsAm = {
+    title: "Լավագույն ալիքները",
+    viju: {
+        channelTitle: "viju",
+        products: [
+            {
+                id: 1,
+                imageUrl: "/Channels/viju/viju-1.jpg",
+                title: "viju",
+                secondTitle: "viju լավագույն հեռուստաալիքները"
+            },
+            {
+                id: 2,
+                imageUrl: "/Channels/viju/viju-2.jpg",
+                title: "viju+ Sport"
+            },
+            {
+                id: 3,
+                imageUrl: "/Channels/viju/viju-3.jpg",
+                title: "viju+ Planet"
+            },
+            {
+                id: 4,
+                imageUrl: "/Channels/viju/viju-4.jpg",
+                title: "viju+ Serial"
+            },
+            {
+                id: 5,
+                imageUrl: "/Channels/viju/viju-5.jpg",
+                title: "viju+ Comedy"
+            },
+            {
+                id: 6,
+                imageUrl: "/Channels/viju/viju-6.jpg",
+                title: "viju+ Megahit"
+            },
+            {
+                id: 7,
+                imageUrl: "/Channels/viju/viju-7.jpg",
+                title: "viju+ Premiere"
+            },
+            {
+                id: 8,
+                imageUrl: "/Channels/viju/viju-8.jpg",
+                title: "viju History"
+            },
+            {
+                id: 9,
+                imageUrl: "/Channels/viju/viju-9.jpg",
+                title: "viju Nature"
+            },
+            {
+                id: 10,
+                imageUrl: "/Channels/viju/viju-10.jpg",
+                title: "viju Explore"
+            },
+            {
+                id: 11,
+                imageUrl: "/Channels/viju/viju-11.jpg",
+                title: "viju TV1000 Action"
+            },
+            {
+                id: 12,
+                imageUrl: "/Channels/viju/viju-12.jpg",
+                title: "viju TV1000 Русское"
+            },
+            {
+                id: 13,
+                imageUrl: "/Channels/viju/viju-13.jpg",
+                title: "Da Vinci"
+            }
 
-            ]
-        },
-        shantTv: {
-            title: "Շանթ TV",
-            products: [
-                {
-                    id: 1,
-                    imageUrl: "",
-                    title: "Շանթ TV"
-                },
-                {
-                    id: 2,
-                    imageUrl: "",
-                    title: "Շանթ Premium HD"
-                },
-                {
-                    id: 3,
-                    imageUrl: "",
-                    title: "Շանթ HD"
-                },
-                {
-                    id: 4,
-                    imageUrl: "",
-                    title: "Շանթ Սերիալ HD"
-                },
-                {
-                    id: 5,
-                    imageUrl: "",
-                    title: "Շանթ Գյումրի"
-                },
-                {
-                    id: 6,
-                    imageUrl: "",
-                    title: "Շանթ Music HD"
-                },
-                {
-                    id: 7,
-                    imageUrl: "",
-                    title: "Shant Kids"
-                }
-            ]
-        }
+        ]
+    },
+    shantTv: {
+        title: "Շանթ TV",
+        products: [
+            {
+                id: 1,
+                imageUrl: "/Channels/shantTv/shant-1.png",
+                title: "Շանթ TV"
+            },
+            {
+                id: 2,
+                imageUrl: "/Channels/shantTv/shant-2.png",
+                title: "Շանթ Premium HD"
+            },
+            {
+                id: 3,
+                imageUrl: "/Channels/shantTv/shant-3.png",
+                title: "Շանթ HD"
+            },
+            {
+                id: 4,
+                imageUrl: "/Channels/shantTv/shant-4.png",
+                title: "Շանթ Սերիալ HD"
+            },
+            {
+                id: 5,
+                imageUrl: "/Channels/shantTv/shant-5.png",
+                title: "Շանթ Գյումրի"
+            },
+            {
+                id: 6,
+                imageUrl: "/Channels/shantTv/shant-6.png",
+                title: "Շանթ Music HD"
+            },
+            {
+                id: 7,
+                imageUrl: "/Channels/shantTv/shant-7.jpg",
+                title: "Shant Kids"
+            }
+        ]
     }
-]
+}
 
 export const navLinksAm = [
     {
