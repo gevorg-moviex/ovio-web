@@ -7,19 +7,22 @@ import BottomContact from './Components/BottomContact/bottomContact'
 import Header from './Components/Header/header'
 import FirstTopSide from './Components/FirstTop/firstTopSide'
 import Footer from './Components/Footer/footer'
+import Section from './Components/Section/section'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      {/* <FirstTopSide />
+      <FirstTopSide />
       <Header />
+      <Section />
       <Other />
       <Cards /> 
       <Suggestions />
-      <BottomContact /> */}
+      <BottomContact /> 
       <Footer />
+     
     </>
   )
 }

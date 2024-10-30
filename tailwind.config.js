@@ -11,10 +11,13 @@ export default {
         "product1770x": "1455px",
         "product1520x": "1520px",
         "product1465x": "1465px",
+        "product1370x": "1370px",
         "product1360x": "1360px",
         "product1310x": "1310px",
         "product1260x": "1260px",
+        "product1255x": "1255px",
         "product1220x": "1220px",
+        "product1200x": "1200px",
         "product1070x": "1070px",
         "product1280x": "1280px",
         "product1190x": "1190px",
@@ -28,6 +31,7 @@ export default {
         "product700x": "700px",
         "product660x": "660px",
         "product640x": "640px",
+        "product590x": "590px",
         "product560x": "560px",
         "product460x": "460px",
         "product420x": "420px",
@@ -42,7 +46,10 @@ export default {
       },
       gridAutoColumns: {
         "3xauto": "repeat(3, auto)",
-      }
+      },
+      borderRadius: {
+        'custom': '50% 0 0 50%',
+      },
     },
   },
   plugins: [],

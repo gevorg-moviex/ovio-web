@@ -51,7 +51,7 @@ export default function Footer(){
                         </div>
                         <div className="flex justify-center gap-4 mt-8">
                             <a href="" className="w-12 bg-[#27303f] flex justify-center items-center h-12 border-none outline-none rounded-full text-3xl text-center transition-all duration-300 hover:bg-[#04eed2]">
-                                <FaFacebook />
+                                <FaFacebook />  
                             </a>
                             <a href="" className="w-12 bg-[#27303f] flex justify-center items-center h-12 border-none outline-none rounded-full text-3xl text-center transition-all duration-300 hover:bg-[#04eed2]">
                                 <FaYoutube />
@@ -74,10 +74,10 @@ export default function Footer(){
                                 ))}
                             </select>
                             <div className="flex flex-col gap-5">
-                                <input type="text" name="" id="" className="bg-[#27303f] border px-3 py-3 border-[#4b515e] rounded-md outline-none" />
-                                <input type="text" name="" id="" className="bg-[#27303f] border px-3 py-3 border-[#4b515e] rounded-md outline-none" />
-                                <input type="text" name="" id="" className="bg-[#27303f] border px-3 py-3 border-[#4b515e] rounded-md outline-none" />
-                                <input type="text" name="" id="" className="bg-[#27303f] border px-3 h-24 border-[#4b515e] rounded-md outline-none" />
+                                <input type="text" name="" id="" placeholder="Ձեր անունը" className="bg-[#27303f] border px-3 py-3 border-[#4b515e] rounded-md outline-none" />
+                                <input type="text" name="" id="" placeholder="Ձեր էլ․ փոստի հասցեն" className="bg-[#27303f] border px-3 py-3 border-[#4b515e] rounded-md outline-none" />
+                                <input type="text" name="" id="" placeholder="Հեռ․ 091XXXXXX" className="bg-[#27303f] border px-3 py-3 border-[#4b515e] rounded-md outline-none" />
+                                <input type="text" name="" id="" placeholder="Ձեր հաղորդագրությունը" className="bg-[#27303f] border px-3 h-24 border-[#4b515e] rounded-md outline-none" />
                                 <button className="min-w-60 text-sm bg-[#53079d] font-bold py-4 px-6 rounded-xl border-none outline-none">Ուղարկել</button>
                             </div>
                         </div>

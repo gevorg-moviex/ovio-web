@@ -442,3 +442,128 @@ export const footerLinksAm = {
         }
     ]
 }
+
+export const sectionAm = [
+    {
+        id: 1,
+        title: "Միացի՛ր All in տարեկան III-ին ♡  4950 դրամով՝ 9900-ի փոխարեն",
+        description: "մինչև 300 Մբ/վ արագություն, 180+ ալիք, 25 000 ֆիլմ և սերիալ 3 ամիս 50% զեղչով",
+        imageUrl: "/Section/section-1.png",
+        buttons: [
+            {
+                text: "Իմացի՛ր ավելին", 
+                path: "#",
+            },
+            {
+                text: "Միացի՛ր հիմա",
+                path: "#"
+            }
+        ]
+    },
+    {
+        id: 2,
+        title: "Բարի գալու՜ստ OVIO",
+        description: "Բացահայտի՛ր...",
+        imageUrl: "/Section/section-2.jpg"
+    },
+    {
+        id: 3,
+        title: "Երաշխավորված ինտերնետ",
+        description: "ձեր հաջողակ բիզնեսի համար",
+        imageUrl: "/Section/section-3.jpg",
+        buttons: {
+            text: "Իմացի՛ր ավելին", 
+            path: "#" 
+        },
+    },
+    {
+        id: 4,
+        title: "Դիտի՛ր ֆուտբոլի TOP լիգաները",
+        description: "Սպորտն ավելի մոտ է OVIO-ի հետ",
+        imageUrl: "/Section/section-4.png"
+    },
+    {
+        id: 5,
+        title: "Զգա՛ խաղը, փոխի՛ր իրականությունը",
+        description: "Վերածե՛ք հին և թույլ համակարգիչը, պլանշետը կամ սմարթֆոնը սուպեր արագ սարքի մեկ քլիքով",
+        imageUrl: "/Section/section-5.png",
+        buttons: [
+            {
+                text: "Իմացի՛ր ավելին", 
+                path: "#" 
+            },
+            {
+                text: "Միացրու՛ PowerPlay",
+                path: "#"
+            }
+        ]
+    },
+    {
+        id: 6,
+        title: "Վճարի՛ր ժամանակին",
+        description: "ստացի՛ր էլ ավելի մեծ արագություն",
+        imageUrl: "/Section/section-6.png",
+        buttons: [
+            {
+                text: "Իմացի՛ր ավելին", 
+                path: "#" 
+            },
+        ]
+    },
+    {
+        id: 7,
+        title: "Ստեղծի՛ր սմարթ իրականություն",
+        description: "Գնի՛ր սմարթ սարքեր OVIO-ի սպասարկման սրահներից",
+        imageUrl: "/Section/section-7.png",
+        buttons: [
+            {
+                text: "Իմացի՛ր ավելին", 
+                path: "#" 
+            },
+        ]
+    },
+    {
+        id: 8,
+        title: "OVIO-ի հետ հարմար է",
+        description: "Մեծածախ գներ Վեգայում՝ միայն OVIO-ի բաժանորդների համար",
+        imageUrl: "/Section/section-8.png",
+        buttons: [
+            {
+                text: "Իմացի՛ր ավելին", 
+                path: "#" 
+            },
+            {
+                text: "Միացի՛ր հիմա",
+                path: "#"
+            }
+        ]
+    },
+    {
+        id: 9,
+        title: "Ամպային տեսահսկման ծառայություն",
+        description: "Պահե՛ք տվյալներն անվտանգ ամպային տիրույթում",
+        imageUrl: "/Section/section-9.png",
+        buttons: [
+            {
+                text: "Իմացի՛ր ավելին", 
+                path: "#" 
+            }
+        ]
+    },
+    {
+        id: 10,
+        title: "OVIO-ն ունի նոր TV հարթակ",
+        description: "գտե՛ք ավելի քանի 50 000 ֆիլմեր և սերիալներ, շաատ TV ալիքներ Wink-ում՝ բաժանորդագրվելով OVIO-ին",
+        imageUrl: "/Section/section-10.png",
+        buttons: [
+            {
+                text: "Իմացի՛ր ավելին", 
+                path: "#" 
+            },
+            {
+                text: "Միացի՛ր հիմա",
+                path: "#"
+            }
+        ]
+    }
+]
