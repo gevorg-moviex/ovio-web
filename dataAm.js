@@ -566,3 +566,24 @@ export const sectionAm = [
         ]
     }
 ]
+
+export const helpItemsAm = [
+    {
+        title: "Սմարթ TV ուղեցույց",
+        description: "Գտի՛ր Սմարթ TV վերաբերյալ բոլոր հարցերիդ պատասխանները՝ սեղմելով ներքևի կոճակը։",
+        imageUrl: "/Help/help-item-1.jpg",
+        path: "#"
+    },
+    {
+        title: "Հեռախոսային սպասարկում",
+        description: "Ստացե՛ք հեռախոսային արագ, բարձրակարգ և ապահով սպասարկում` ընդամենը մեկ զանգի միջոցով:",
+        imageUrl: "/Help/help-item-2.jpg",
+        path: "#"
+    },
+    {
+        title: "Այլ ծառայություններ",
+        description: "Մենք առաջարկում ենք տարատեսակ ծառայություններ և լուծումներ քո հարմարավետության համար։",
+        imageUrl: "/Help/help-item-3.jpg",
+        path: "#"
+    }
+]

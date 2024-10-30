@@ -11,6 +11,8 @@ import Section from './Components/Section/section'
 import SuggestionsLayout from './Layouts/SuggestionsLayout'
 import Channel from './Components/Channel/channel'
 import VideoPart from './Components/VideoPart/videopart'
+import Help from './Components/Help/help'
+import HelpLayout from './Layouts/HelpLayout'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,8 +29,9 @@ function App() {
       <Footer /> */}
      {/* <SuggestionsLayout /> */}
      {/* <VideoPart />*/}
-     <Suggestions />
-     <BottomContact /> 
+     {/* <Suggestions />
+     <BottomContact />  */}
+     <HelpLayout />
     </>
   )
 }
