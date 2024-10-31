@@ -1,4 +1,4 @@
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import { sectionAm } from "../../../dataAm";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.css'; 

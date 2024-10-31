@@ -5,12 +5,12 @@ import { Navigation } from "swiper/modules";
 
 export default function Suggestions() {
     return (
-        <div className="px-3 product340x:px-7 product660x:px-28">
+        <div className="px-3 mt-4 product340x:px-7 product660x:px-28">
             <div>
                 <h1 className="text-3xl font-bold pb-4">{suggestionsAm.title}</h1>
             </div>
             <Swiper
-                slidesPerView={3}
+                slidesPerView={2}
                 spaceBetween={130}
                 pagination={{ clickable: false }}
                 modules={[Navigation]}

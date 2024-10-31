@@ -1,5 +1,6 @@
     import { useCallback, useRef, useState } from "react"
     import { conditionsAm } from "../../../dataAm";
+import { useNavigate } from "react-router";
 
     export default function Register() {
         const [modal, setModal] = useState(false);
@@ -8,6 +9,8 @@
 
         const passportId = useRef();
         const passwordUser = useRef();
+
+        const navigate = useNavigate();
 
         const toggleModal = () => {
             setModal(prev => !prev);
@@ -37,6 +40,8 @@
                 const infosArr = JSON.parse(localStorage.getItem("info")) || [];
                 infosArr.push(obj)
                 localStorage.setItem("info", JSON.stringify(infosArr))
+
+                navigate("/login")
             }
         },[checked])
 

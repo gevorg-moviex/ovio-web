@@ -30,7 +30,9 @@ export default function Navbar(){
     return (
         <div className={`flex fixed top-0 ${isFixed ? "product660x:top-0" : "product660x:top-auto" } z-50 bg-white w-full product1260x:p-5 product1360x:px-10 product1455x:px-20 items-center justify-between py-3`}>
             <div>
-                <img src="/header-logo.svg" alt="" width="200" className="pl-3 product1260x:pl-0" />
+                <Link to="/">
+                    <img src="/header-logo.svg" alt="" width="200" className="pl-3 product1260x:pl-0" />
+                </Link>
             </div>
             <div className={`${hamburger ? "block h-screen fixed z-50 pb-5 bg-white top-[70px]" : "hidden"} product1260x:flex items-center justify-center gap-5 w-full px-2`}>
                 <nav>
@@ -50,7 +52,7 @@ export default function Navbar(){
                     <TopSide />
                 </div>
                 <div>
-                    <a href="" className="flex flex-col product1465x:flex-row gap-2 items-start product1465x:items-center">
+                    <Link to="/login" className="flex flex-col product1465x:flex-row gap-2 items-start product1465x:items-center">
                         <div className="hidden product1260x:inline-block">
                             <FaUser />
                         </div>
@@ -58,7 +60,7 @@ export default function Navbar(){
                         <div className="block w-full product660x:hidden">
                             <button className="mt-3 bg-[#8c33e1] text-white hover:brightness-[120%] transition-all duration-300 cursor-pointer text-sm font-[600] w-full h-12 rounded-xl border-none outline-none tracking-wider">Միացի՛ր հիմա</button>
                         </div>
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div className="flex gap-3">

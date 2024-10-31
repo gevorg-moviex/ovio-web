@@ -2,7 +2,7 @@ import { otherAm } from "../../../dataAm";
 
 export default function Other() {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid mt-48 grid-cols-1 md:grid-cols-2">
             {otherAm.map(item => (
                 <div 
                     className="relative h-[450px] bg-cover bg-center p-4 flex justify-center items-end pb-16" 

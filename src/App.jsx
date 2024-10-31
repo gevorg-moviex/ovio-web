@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { Routes, Route, useLocation } from 'react-router-dom'; // Importing Routes
-import Header from './Components/Header/header';
+import { Routes, Route, useLocation } from 'react-router-dom'; 
 import Section from './Components/Section/section';
-import HelpLayout from './Layouts/HelpLayout';
 import Loading from './Components/Loading/loading';
+import Home from './Pages/home';
+import RegisterPage from './Pages/registerPage';
+import LoginPage from './Pages/loginPage';
+import HelpPage from './Pages/helpPage';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -15,7 +17,7 @@ function App() {
 
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1500)
+    }, 1000)
 
     return () => clearTimeout(timer)
   }, [location])
@@ -24,13 +26,15 @@ function App() {
     <>
       {loading ? 
           <Loading />  
-        :
+        : 
         <Routes>
-          <Route path="/" element={<Header />} />
+          <Route path="/" element={<Home />} />
+          <Route path='/login' element={<LoginPage />} />
+          <Route path='/register' element={<RegisterPage />} />
           <Route path="/section" element={<Section />} />
-          <Route path="/help" element={<HelpLayout />} />
+          <Route path="/help" element={<HelpPage />} />
         </Routes> 
-      }
+        }
     </>
   );
 }

@@ -4,7 +4,7 @@ import { Navigation, Pagination } from "swiper/modules";
 
 export default function News() {
     return (
-        <div className="pl-10 product560x:pl-20 product1190x:pl-36">
+        <div className="pl-10 pb-10 mt-24 product560x:pl-20 product1190x:pl-36">
             <span className="text-3xl font-bold mx-5">{newsAm.title}</span>
             <Swiper
                 slidesPerView={4}

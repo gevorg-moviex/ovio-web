@@ -2,7 +2,7 @@ import { useCallback, useRef, useState } from "react"
 import { conditionsAm } from "../../../dataAm";
 import { FaIdCard, FaLock } from "react-icons/fa";
 import { users } from "../../../userInfo";
-import Register from "../Register/register";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
     const [error, setError] = useState(false);
@@ -10,6 +10,8 @@ export default function Login() {
 
     const userPassportId = useRef();
     const userPassword = useRef();
+
+    const navigate = useNavigate();
 
     const handleLogin = useCallback((e) => {
         e.preventDefault();
@@ -28,9 +30,9 @@ export default function Login() {
         const user = users.find(item => item.passportId === infoPassport && item.password === infoPassword);
 
         if (user){
-            alert("Login Completed")
             userPassportId.current.value = "";
             userPassword.current.value = "";
+            navigate("/")
         }else{
             setError2(true)
             userPassportId.current.value = "";
@@ -74,7 +76,7 @@ export default function Login() {
                 <div className="flex justify-center mt-5">
                     <div className="flex w-[70%] flex-col justify-center gap-3 items-center text-center">
                         <p className="text-[#858585] text-[13px]">{conditionsAm.loginInfo}</p>
-                        <a href="" className="w-full"><button type="button" className="rounded-2xl outline-none w-[80%] hover:bg-[#101828] hover:text-white transition-all duration-300 font-semibold text-[#101828] border border-[#101828] px-6 tracking-wide py-3">Գրանցվել հիմա</button></a>
+                        <Link to="/register" className="w-full"><button type="button" className="rounded-2xl outline-none w-[80%] hover:bg-[#101828] hover:text-white transition-all duration-300 font-semibold text-[#101828] border border-[#101828] px-6 tracking-wide py-3">Գրանցվել հիմա</button></Link>
                     </div>
                 </div>
             </form>

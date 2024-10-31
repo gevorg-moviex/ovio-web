@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Channel({ active }) {
     return (
-        <div>
+        <div className="mt-24">
             <Swiper
                 spaceBetween={20}
                 slidesPerView={3}

@@ -5,7 +5,7 @@ import { Navigation } from "swiper/modules";
 
 export default function Cards() {
     return (
-        <div className="px-3 product340x:px-7 product660x:px-28">
+        <div className="px-3 mt-16 product340x:px-7 product660x:px-28">
             <div>
                 <h1 className="text-3xl font-bold">{cardsAm.title}</h1>
             </div>

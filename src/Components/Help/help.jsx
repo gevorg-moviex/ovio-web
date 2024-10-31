@@ -21,7 +21,7 @@ export default function Help() {
                 >
                 </div>
             </div>
-            <div className="flex flex-col items-center bg-gray-50 py-14 z-50 relative gap-16">
+            <div className="flex flex-col items-center bg-gray-50 py-14 relative gap-16">
                 <div className="flex flex-col gap-8 w-[95%] product1200x:w-[80%]">
                     <h1 className="text-3xl font-semibold">Մենք այստեղ ենք քեզ օգնելու</h1>
                     <p className="-tracking-tight">Այստեղ կգտնես քո բոլոր հարցերի պատասխաններն ու մեկնաբանությունները, իսկ եթե ոչ, ապա 24/7 հասանելիությամբ զանգերի կենտրոնի մեր աշխատակիցները սիրով կպատասխանեն քո հարցերին, կուղղորդեն ծառայությունների ընտրության և այլ հարցերում։ Զանգի՛ր 060 46 46 46 օրվա ցանկացած ժամի։</p>

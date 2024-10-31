@@ -20,7 +20,7 @@ export default function BottomContact(){
     return (
         <>
             {openModal && (
-                <div className="modal h-[480px] z-50 rounded-md pb-3 w-auto ml-4 product420x:ml-0 product420x:w-[350px] fixed right-5 bottom-24 shadow-bottomContact">
+                <div className="modal h-[480px] z-50 rounded-md bg-white pb-3 w-auto ml-4 product420x:ml-0 product420x:w-[350px] fixed right-5 bottom-24 shadow-bottomContact">
                     <div className="flex flex-col rounded-md bg-white justify-between h-full items-center">
                         <div className="text-center pt-5 rounded-md bg-[#450087] w-full px-4 text-white h-[150px] relative">
                             <h4>Խնդրում ենք գրել հարցը, մեր մասնագետները հնարավորինս արագ կպատասխանեն Ձեզ</h4>
@@ -40,7 +40,7 @@ export default function BottomContact(){
                     </div>
                 </div>
             )}
-            <div onClick={toggleModal} className="bg-[#450087] cursor-pointer fixed flex justify-center items-center w-[60px] h-[60px] bottom-7 rounded-full right-7">
+            <div onClick={toggleModal} className="bg-[#450087] cursor-pointer fixed z-50 flex justify-center items-center w-[60px] h-[60px] bottom-7 rounded-full right-7">
                 {openModal ? <FaXmark className="w-8 h-8 text-white" /> : <FaMessage className="w-8 h-8 text-white" /> }
             </div>
         </>   
