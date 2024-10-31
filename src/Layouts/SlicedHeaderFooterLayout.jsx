@@ -1,12 +1,11 @@
-import Register from "../Components/Register/register";
 import SlicedFooter from "../Components/SlicedFooter/slicedFooter";
 import SlicedHeader from "../Components/SlicedHeader/slicedHeader";
 
-export default function RegisterLayout() {
+export default function SlicedHeaderFooterLayout( {children} ) {
     return (
         <>
             <SlicedHeader />
-                <Register />
+                {children}
             <SlicedFooter />
         </>
     )

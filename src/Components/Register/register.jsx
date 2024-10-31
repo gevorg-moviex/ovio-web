@@ -7,7 +7,7 @@
         const [error, setError] = useState(false);
 
         const passportId = useRef();
-        const numberPhone = useRef();
+        const passwordUser = useRef();
 
         const toggleModal = () => {
             setModal(prev => !prev);
@@ -16,9 +16,9 @@
         const getInfo = useCallback((event) => {
             event.preventDefault()
             const passportIdValue = passportId.current.value
-            const numberPhoneValue = numberPhone.current.value;
+            const passwordUserValue = passwordUser.current.value;
 
-            if(passportIdValue === "" || numberPhoneValue === "" || !checked){
+            if(passportIdValue === "" || passwordUserValue === "" || !checked){
                 setError(true)
             }else{
                 setError(false);
@@ -26,11 +26,11 @@
                 const obj = {
                     date: new Date().toString(),
                     passportId: passportIdValue,
-                    numberPhone: numberPhoneValue
+                    passwordUser: passwordUserValue
                 }
 
                 passportId.current.value = "",
-                numberPhone.current.value = "",
+                passwordUser.current.value = "",
                 isChecked(false)
 
 
@@ -55,14 +55,14 @@
                     <div className="flex flex-col gap-3">
                         <div className="flex flex-col gap-1">
                             <label htmlFor="passportId">{conditionsAm.titleInputFirst}</label>
-                            <input type="text" ref={passportId} className="border focus:shadow-register transition-all duration-200 border-[#e3e8ec] h-11 pl-2 rounded-md outline-none" name="" id="passportId" />
+                            <input type="text" ref={passportId} autoComplete="username" className="border focus:shadow-register transition-all duration-200 border-[#e3e8ec] h-11 pl-2 rounded-md outline-none" name="" id="passportId" />
                             {error && (
                                 <span className="text-xs text-red-600">{conditionsAm.error1}</span>
                             )}
                         </div>
                         <div className="flex flex-col gap-1">
-                            <label htmlFor="number">{conditionsAm.titleInputSecond}</label>
-                            <input type="number" ref={numberPhone} placeholder="xxx xx xx xx" className="border border-[#e3e8ec] placeholder:opacity-90 placeholder:text-[#233353] focus:shadow-register transition-all duration-200 h-11 pl-2 rounded-md outline-none" id="number" />
+                            <label htmlFor="password">{conditionsAm.titleInputSecond}</label>
+                            <input type="password" autoComplete="current-password" ref={passwordUser} placeholder="**********" className="border border-[#e3e8ec] placeholder:opacity-90 placeholder:text-[#233353] focus:shadow-register transition-all duration-200 h-11 pl-2 rounded-md outline-none" id="password" />
                             {error && (
                                 <span className="text-xs text-red-600">{conditionsAm.error2}</span>
                             )}

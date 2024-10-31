@@ -16,9 +16,11 @@ import HelpLayout from './Layouts/HelpLayout'
 import News from './Components/News/news'
 import { BiLogIn } from 'react-icons/bi'
 import Register from './Components/Register/register'
-import RegisterLayout from './Layouts/RegisterLayout'
+import RegisterLayout from './Layouts/SlicedHeaderFooterLayout'
 import SlicedHeader from './Components/SlicedHeader/slicedHeader'
 import SlicedFooter from './Components/SlicedFooter/slicedFooter'
+import SlicedHeaderFooterLayout from './Layouts/SlicedHeaderFooterLayout'
+import Login from './Components/Login/login'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -39,9 +41,11 @@ function App() {
      <BottomContact />  */}
      {/* <HelpLayout /> */}
      {/* <News /> */}
-     {/* <RegisterLayout /> */}
+     {/* <SlicedHeaderFooterLayout children={<Register />} /> */}
      {/* <SlicedHeader /> */}
      {/* <SlicedFooter /> */}
+     {/* <Login /> */}
+     <SlicedHeaderFooterLayout children={<Login />} />
     </>
   )
 }
