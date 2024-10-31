@@ -14,6 +14,11 @@ import VideoPart from './Components/VideoPart/videopart'
 import Help from './Components/Help/help'
 import HelpLayout from './Layouts/HelpLayout'
 import News from './Components/News/news'
+import { BiLogIn } from 'react-icons/bi'
+import Register from './Components/Register/register'
+import RegisterLayout from './Layouts/RegisterLayout'
+import SlicedHeader from './Components/SlicedHeader/slicedHeader'
+import SlicedFooter from './Components/SlicedFooter/slicedFooter'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,7 +38,10 @@ function App() {
      {/* <Suggestions />
      <BottomContact />  */}
      {/* <HelpLayout /> */}
-     <News />
+     {/* <News /> */}
+     {/* <RegisterLayout /> */}
+     {/* <SlicedHeader /> */}
+     {/* <SlicedFooter /> */}
     </>
   )
 }

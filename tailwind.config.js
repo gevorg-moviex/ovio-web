@@ -42,7 +42,9 @@ export default {
       },
       boxShadow: {
         "topSide": "0 9px 45px 0 rgba(0,0,0,.2)",
-        "bottomContact": "rgba(0, 0, 0, 0.24) 0px 3px 8px"
+        "bottomContact": "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+        "headerBottom": "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+        "register": "0 0 0 .2rem rgba(83, 7, 157, .25)"
       },
       gridAutoColumns: {
         "3xauto": "repeat(3, auto)",
