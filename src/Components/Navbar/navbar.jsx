@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes, FaUser } from "react-icons/fa";
 import TopSide from "../TopSide/topside";
+import { Link } from "react-router-dom";
 
 export default function Navbar(){
     const [hamburger, setHamburger] = useState(false);
@@ -39,7 +40,9 @@ export default function Navbar(){
                         <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">Բիզնեսի համար</li>
                         <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">Մեր մասին</li>
                         <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">Վճարել</li>
-                        <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">Օգնություն</li>
+                        <Link to="/help">
+                            <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">Օգնություն</li>
+                        </Link>
                     </ul>
                 </nav>
                 <div className="hidden product1260x:block w-0 h-12 border-[#e2e2e2] border-[0.8px]"></div>

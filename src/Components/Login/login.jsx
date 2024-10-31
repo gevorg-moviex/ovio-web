@@ -2,6 +2,7 @@ import { useCallback, useRef, useState } from "react"
 import { conditionsAm } from "../../../dataAm";
 import { FaIdCard, FaLock } from "react-icons/fa";
 import { users } from "../../../userInfo";
+import Register from "../Register/register";
 
 export default function Login() {
     const [error, setError] = useState(false);
@@ -73,7 +74,7 @@ export default function Login() {
                 <div className="flex justify-center mt-5">
                     <div className="flex w-[70%] flex-col justify-center gap-3 items-center text-center">
                         <p className="text-[#858585] text-[13px]">{conditionsAm.loginInfo}</p>
-                        <button type="button" className="rounded-2xl outline-none w-[80%] hover:bg-[#101828] hover:text-white transition-all duration-300 font-semibold text-[#101828] border border-[#101828] px-6 tracking-wide py-3">Գրանցվել հիմա</button>
+                        <a href="" className="w-full"><button type="button" className="rounded-2xl outline-none w-[80%] hover:bg-[#101828] hover:text-white transition-all duration-300 font-semibold text-[#101828] border border-[#101828] px-6 tracking-wide py-3">Գրանցվել հիմա</button></a>
                     </div>
                 </div>
             </form>

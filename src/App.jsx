@@ -1,53 +1,38 @@
-import { useState } from 'react'
-import './App.css'
-import Other from './Components/Other/other'
-import Cards from './Components/Cards/cards'
-import Suggestions from './Components/Suggestions/suggestion'
-import BottomContact from './Components/BottomContact/bottomContact'
-import Header from './Components/Header/header'
-import FirstTopSide from './Components/FirstTop/firstTopSide'
-import Footer from './Components/Footer/footer'
-import Section from './Components/Section/section'
-import SuggestionsLayout from './Layouts/SuggestionsLayout'
-import Channel from './Components/Channel/channel'
-import VideoPart from './Components/VideoPart/videopart'
-import Help from './Components/Help/help'
-import HelpLayout from './Layouts/HelpLayout'
-import News from './Components/News/news'
-import { BiLogIn } from 'react-icons/bi'
-import Register from './Components/Register/register'
-import RegisterLayout from './Layouts/SlicedHeaderFooterLayout'
-import SlicedHeader from './Components/SlicedHeader/slicedHeader'
-import SlicedFooter from './Components/SlicedFooter/slicedFooter'
-import SlicedHeaderFooterLayout from './Layouts/SlicedHeaderFooterLayout'
-import Login from './Components/Login/login'
+import { useEffect, useState } from 'react';
+import './App.css';
+import { Routes, Route, useLocation } from 'react-router-dom'; // Importing Routes
+import Header from './Components/Header/header';
+import Section from './Components/Section/section';
+import HelpLayout from './Layouts/HelpLayout';
+import Loading from './Components/Loading/loading';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [loading, setLoading] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setLoading(true);
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500)
+
+    return () => clearTimeout(timer)
+  }, [location])
 
   return (
     <>
-      {/* <FirstTopSide />
-      <Header />
-      <Section />
-      <Other />
-      <Cards /> 
-      <Suggestions />
-      <BottomContact /> 
-      <Footer /> */}
-     {/* <SuggestionsLayout /> */}
-     {/* <VideoPart />*/}
-     {/* <Suggestions />
-     <BottomContact />  */}
-     {/* <HelpLayout /> */}
-     {/* <News /> */}
-     {/* <SlicedHeaderFooterLayout children={<Register />} /> */}
-     {/* <SlicedHeader /> */}
-     {/* <SlicedFooter /> */}
-     {/* <Login /> */}
-     <SlicedHeaderFooterLayout children={<Login />} />
+      {loading ? 
+          <Loading />  
+        :
+        <Routes>
+          <Route path="/" element={<Header />} />
+          <Route path="/section" element={<Section />} />
+          <Route path="/help" element={<HelpLayout />} />
+        </Routes> 
+      }
     </>
-  )
+  );
 }
 
-export default App
+export default App;
