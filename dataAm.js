@@ -71,7 +71,7 @@ export const newsAm = {
     products: [
         {
             id: 1,
-            imageUrl: "",
+            imageUrl: "/News/news-1.jpg",
             title: "Պրոֆիլակտիկ աշխատանքներ",
             date: "2024.10.16",
             top: "Պրոֆիլակտիկ աշխատանքներ",
@@ -80,7 +80,7 @@ export const newsAm = {
         },
         {
             id: 2,
-            imageUrl: "",
+            imageUrl: "/News/news-2.jpg",
             title: "Պրոֆիլակտիկ աշխատանքներ",
             date: "2024.10.09",
             top: "Պրոֆիլակտիկ աշխատանքներ",
@@ -89,7 +89,7 @@ export const newsAm = {
         },
         {
             id: 3,
-            imageUrl: "",
+            imageUrl: "/News/news-3.png",
             title: "OVIO-ն՝ «Ներքին Աուդիտորների Ինստիտուտ-Հայաստան»-ի գործընկեր «Կառավարում, Ռիսկեր, Վերահսկողություն․ Խթանելով համագործակցությունը» խորագրով 2024 միջազգային կոնֆերանսի շրջանակում",
             date: "2024.10.09",
             top: "Մամուլի համար",
@@ -98,7 +98,7 @@ export const newsAm = {
         },
         {
             id: 4,
-            imageUrl: "",
+            imageUrl: "/News/news-4.png",
             title: "OVIO-ն գործարկեց նոր «All in» փաթեթը 3 ամիս 50% զեղչով՝ 4950 դրամով",
             date: "2024.10.01",
             top: "Մամուլի համար",
@@ -107,7 +107,7 @@ export const newsAm = {
         },
         {
             id: 5,
-            imageUrl: "",
+            imageUrl: "/News/news-5.png",
             title: "OVIO-ն ինովացիոն կրթության կողքին` Ռոբոտների միջազգային օլիմպիադայի շրջանակում",
             date: "2024.09.25",
             top: "Մամուլի համար",
@@ -116,7 +116,7 @@ export const newsAm = {
         },
         {
             id: 6,
-            imageUrl: "",
+            imageUrl: "/News/news-6.jpg",
             title: "Վերաբացվել են OVIO-ի վերափոխված և նորացված Վաճառքի և սպասարկման սրաhը",
             date: "2024.09.23",
             top: "Նորություն",
@@ -125,7 +125,7 @@ export const newsAm = {
         },
         {
             id: 7,
-            imageUrl: "",
+            imageUrl: "/News/news-7.png",
             title: "Ծանուցում դեպի նոր հեռուստատեսության հարթակ միգրացիայի և տեխնիկական աշխատանքների վերաբերյալ",
             date: "2024.08.14",
             top: "Մամուլի համար",
@@ -134,7 +134,7 @@ export const newsAm = {
         },
         {
             id: 8,
-            imageUrl: "",
+            imageUrl: "/News/news-8.jpg",
             title: "Հեռահաղորդակցություն և կիբերանվտանգություն",
             date: "2024.08.09",
             top: "Բլոգ",
@@ -143,7 +143,7 @@ export const newsAm = {
         },
         {
             id: 9,
-            imageUrl: "",
+            imageUrl: "/News/news-9.jpg",
             title: "Պրոֆիլակտիկ աշխատանքներ",
             date: "2024.07.29",
             top: "Պրոֆիլակտիկ աշխատանքներ",
@@ -152,7 +152,7 @@ export const newsAm = {
         },
         {
             id: 10,
-            imageUrl: "",
+            imageUrl: "/News/news-10.jpg",
             title: "OVIO-ն Silicon Mountains 2024 Shirak տեխնոլոգիական ֆորումում մասնակցեց՝ ներկայացնելով Հայաստանում ամենախոշոր Տվյալների մշակման կենտրոնը",
             date: "2024.07.05",
             top: "",

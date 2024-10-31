@@ -13,6 +13,7 @@ import Channel from './Components/Channel/channel'
 import VideoPart from './Components/VideoPart/videopart'
 import Help from './Components/Help/help'
 import HelpLayout from './Layouts/HelpLayout'
+import News from './Components/News/news'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,7 +32,8 @@ function App() {
      {/* <VideoPart />*/}
      {/* <Suggestions />
      <BottomContact />  */}
-     <HelpLayout />
+     {/* <HelpLayout /> */}
+     <News />
     </>
   )
 }
