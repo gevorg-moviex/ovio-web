@@ -1,4 +1,4 @@
-const users = [
+export const users = [
     {
         passportId: "AV2084231",
         password: "12345"
