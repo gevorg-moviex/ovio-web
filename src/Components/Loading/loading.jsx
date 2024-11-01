@@ -6,7 +6,7 @@ const Loader = () => {
           <div className="absolute top-0 left-0 w-[15px] h-[15px] bg-[#22127a] animate-load"></div>
           <div className="absolute bottom-0 left-0 w-[15px] h-[15px] bg-[#22127a] animate-load"></div>
         </div>
-        <style jsx>{`
+        <style>{`
           @keyframes load {
             0% { left: 0; height: 30px; width: 15px; }
             50% { height: 8px; width: 40px; }

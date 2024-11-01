@@ -10,50 +10,42 @@ export default function Cards() {
                 <h1 className="text-3xl font-bold">{cardsAm.title}</h1>
             </div>
             <Swiper
-                slidesPerView="auto"
-                spaceBetween={40}
-                pagination={{clickable: false}}
+                slidesPerView={1}
+                spaceBetween={20}
+                navigation
+                pagination={{ clickable: false }}
                 modules={[Navigation]}
-                style={{cursor: "grab", padding: "40px 0", borderRadius: "0 21px"}}
+                breakpoints={{
+                    800: { 
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    1020: {
+                        slidesPerView: 3,
+                        spaceBetween: 35,
+                    },
+                    1420: { 
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                }}
+                className="cursor-grab py-10 rounded-r-[21px]"
             >
                 {cardsAm.products.map((item) => (
-                    <SwiperSlide key={item.number} style={{width: "453px", borderRadius: "20px"}}>
-                            <div 
-                                style={
-                                    {
-                                        display: "flex",
-                                        gap: "20px",
-                                        height: "152px",
-                                        boxShadow: "0 8px 30px 0 rgba(0,0,0,.15)",
-                                        borderRadius: "12px",
-                                    }
-                                }
+                    <SwiperSlide key={item.number} className="w-[453px] my-10 rounded-[20px]">
+                        <div className="flex gap-5 h-[152px] shadow-lg rounded-[12px] overflow-hidden">
+                            <div
+                                className={`bg-[${item.bgColor}] flex justify-center items-center rounded-[21px_120px_120px_21px] py-2 px-10 text-[44px] font-bold text-white`}
                             >
-                                <div
-                                    style=
-                                    {
-                                        { 
-                                            backgroundColor: item.bgColor,
-                                            display: "flex",
-                                            justifyContent: "center",
-                                            alignItems: "center",
-                                            borderRadius: "21px 120px 120px 21px",
-                                            padding: "0 40px 0 30px",
-                                            fontSize: "44px",
-                                            fontWeight: "bold",
-                                            color: "white"
-                                        }
-                                    }
-                                >
-                                    <span>{item.number}</span>
-                                </div>
-                                <div style={{display: "flex", flexDirection: "column", justifyContent: "space-evenly"}}> 
-                                    <h4>{item.title}</h4>
-                                    <p style={{fontSize: "12px", lineHeight: "1.2", color: "#858585"}}>{item.description}</p>
-                                </div>
+                                <span>{item.number}</span>
                             </div>
+                            <div className="flex flex-col justify-evenly">
+                                <h4 className="text-lg font-semibold">{item.title}</h4>
+                                <p className="text-xs text-[#858585] leading-4">{item.description}</p>
+                            </div>
+                        </div>
                     </SwiperSlide>
-                ))}
+                ))} 
             </Swiper>
         </div>
     );
