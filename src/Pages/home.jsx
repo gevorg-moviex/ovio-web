@@ -7,6 +7,7 @@ import Other from "../Components/Other/other";
 import Channel from "../Components/Channel/channel";
 import News from "../Components/News/news";
 import BottomContact from "../Components/BottomContact/bottomContact";
+import SuggestionsLayout from "../Layouts/SuggestionsLayout";
 
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
             <Suggestions />
             <VideoPart />
             <Other />
-            <Channel />
+            <SuggestionsLayout />
             <News />
             <BottomContact />
         </MainLayout>

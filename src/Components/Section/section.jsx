@@ -13,7 +13,7 @@ export default function Section() {
             >
                 {sectionAm.map(item => (
                     <SwiperSlide key={item.id}>
-                        <div className="flex bg-[#53079D] h-[710px] product590x:h-[625px] items-center justify-center product1255x:justify-start gap-11">
+                        <div className="flex bg-[#53079D] h-[710px] product590x:h-[825px] items-center justify-center product1255x:justify-start gap-11">
                             <div className="w-[70%] text-center items-center product590x:text-left product590x:items-start product1255x:w-[40%] product1255x:pl-20 product1370x:pl-32 flex flex-col gap-9 justify-center">
                                 <span className="text-5xl product590x:text-6xl text-[#04eed2]">{item.title}</span>
                                 <p className="font-normal text-white">{item.description}</p>

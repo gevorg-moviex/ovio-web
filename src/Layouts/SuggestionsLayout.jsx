@@ -6,7 +6,7 @@ export default function SuggestionsLayout() {
     const [active, setActive] = useState(false)
 
     return (
-        <div className="flex flex-col gap-4 items-center">
+        <div className="flex flex-col mt-20 gap-4 items-center">
             <div className="w-[90%] flex flex-col gap-8">
                 <h1 className="text-3xl font-medium">{channelsAm.title}</h1>
                 <div>

@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.css';
 import { suggestionsAm } from "../../../dataAm";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 export default function Suggestions() {
     return (
@@ -12,8 +12,8 @@ export default function Suggestions() {
             <Swiper
                 slidesPerView={1}
                 spaceBetween={10}
-                pagination={{ clickable: true }}
-                modules={[Navigation, Pagination]}
+                pagination={{ clickable: false }}
+                modules={[Navigation]}
                 breakpoints={{
                     640: {
                         slidesPerView: 2,
@@ -29,10 +29,15 @@ export default function Suggestions() {
                     },
                 }}
             >
-                {suggestionsAm.products.map((item) => (
-                    <SwiperSlide key={item.id}>
+                {suggestionsAm.products.map((item, index) => (
+                    <SwiperSlide
+                        key={item.id}
+                        className={`${
+                            index === 0 ? 'col-span-1 row-start-2' : 'col-span-1 row-start-1'
+                        } transition-all duration-500`}
+                    >
                         <div
-                            className="relative my-10 flex justify-center bg-cover bg-center items-end h-[532px] py-8 px-7 text-white rounded-[20px] hover:-translate-y-5 transition-all duration-500 cursor-pointer w-full product640x:max-w-[348px] product970x:max-w-[448px]"
+                            className="relative my-10 flex justify-center bg-cover bg-center items-end h-[432px] py-8 px-7 text-white rounded-[20px] hover:-translate-y-5 transition-all duration-500 cursor-pointer w-full product640x:max-w-[348px] product970x:max-w-[448px]"
                             style={{ backgroundImage: `url(${item.imageUrl})` }}
                         >
                             <div className="absolute inset-0 bg-black opacity-40 rounded-[20px]" />
@@ -49,7 +54,6 @@ export default function Suggestions() {
                     </SwiperSlide>
                 ))}
             </Swiper>
-
         </div>
     );
 }
