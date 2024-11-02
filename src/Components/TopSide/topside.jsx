@@ -1,16 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../Context/language";
 
 export default function TopSide() {
+    const { language, changeLanguage } = useLanguage(); 
+    const [advancedDropdown, setAdvancedDropdown] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
-    const [advancedDropdown, setAdvancedDropdown] = useState(false)
-    const [flag, setSelectedFlag] = useState("am");
 
-    const handleMouseEnter = () => {
+    const handleSelectFlag = (selectedFlag) => {
+        changeLanguage(selectedFlag);
+        setDropdownOpen(false);
+        localStorage.setItem("lang", selectedFlag);
+    };
+
+    const handleMouseEnter = () => {    
         setDropdownOpen(true);
-        setAdvancedDropdown(false);
     };
 
     const handleMouseLeave = () => {
@@ -20,15 +26,10 @@ export default function TopSide() {
     const mouseAdvanced = () => {
         setAdvancedDropdown(true);
         setDropdownOpen(false);
-    }
+    };
 
     const mouseAdvancedLeave = () => {
         setAdvancedDropdown(false);
-    }
-
-    const handleSelectFlag = (flag) => {
-        setSelectedFlag(flag);
-        setDropdownOpen(false);
     };
 
     return (
@@ -49,7 +50,11 @@ export default function TopSide() {
                 <div>
                     <Link to="#" className="flex gap-2 items-center hover:text-[#6e35a3]">
                         <FaLocationDot className="text-[#858585]" />
-                        <span className="text-xs">Գրասենյակներ և ծածկույթ</span>
+                        <span className="text-xs">
+                            {language === "am" ? "Գրասենյակներ և ծածկույթ" : 
+                             language === "en" ? "Offices and Coverage" : 
+                             language === "ru" ? "Офисы и Покрытие" : null}
+                        </span>
                     </Link>
                 </div>
             </div>
@@ -57,31 +62,30 @@ export default function TopSide() {
                 <div className="relative ml-auto flex gap-4 items-center">
                     <div className="flex items-center gap-4">
                         <div className="cursor-pointer" onMouseEnter={mouseAdvanced} onMouseLeave={mouseAdvancedLeave}>
-                            <span className="cursor-pointer text-xs">Լրացուցիչ</span>
+                            <span className="cursor-pointer text-xs">
+                                {language === "am" ? "Լրացուցիչ" : 
+                                 language === "en" ? "Additional" : 
+                                 language === "ru" ? "Дополнительно" : null}
+                            </span>
                         </div>
                         {advancedDropdown && (
-                            <div onMouseEnter={mouseAdvanced} onMouseLeave={mouseAdvancedLeave} className={`absolute right-10 top-6 bg-white rounded-xl shadow-topSide mt-1 z-10 transition-opacity duration-300 ${advancedDropdown ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
+                            <div onMouseEnter={mouseAdvanced} onMouseLeave={mouseAdvancedLeave} className={`absolute z-50 right-10 top-6 bg-white rounded-xl shadow-topSide mt-1 transition-opacity duration-300`}>
                                 <ul className="flex flex-col gap-4 w-64 p-4">
-                                    <li><a href="">Օգնություն</a></li>
-                                    <li><a href="">Հեռախոսային սպասարկում</a></li>
-                                    <li><a href="">Աշխատատեղեր</a></li>
+                                    <li><a href="">{language === "am" ? "Օգնություն" : language === "en" ? "Help" : language === "ru" ? "Помощь" : null}</a></li>
+                                    <li><a href="">{language === "am" ? "Հեռախոսային սպասարկում" : language === "en" ? "Telephone Service" : language === "ru" ? "Обслуживание по телефону" : null}</a></li>
+                                    <li><a href="">{language === "am" ? "Աշխատատեղեր" : language === "en" ? "Vacancies" : language === "ru" ? "Вакансии" : null}</a></li>
                                 </ul>
                             </div>
                         )}
-                        <div
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
-                        >
+                        <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                             <img
-                                srcSet={`Flags/${flag}.svg`}
-                                alt={`${flag} flag`}
+                                srcSet={`Flags/${language}.svg`}
+                                alt={`${language} flag`}
                                 className="w-8 h-8 cursor-pointer"
                             />
                         </div>
                     </div>
-                    <div
-                        onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={`absolute -right-3 top-7 bg-white rounded-xl w-14 shadow-topSide mt-1 z-10 transition-opacity duration-300 ${dropdownOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-                    >
+                    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={`absolute z-50 -right-3 top-7 bg-white rounded-xl w-14 shadow-topSide mt-1 transition-opacity duration-300 ${dropdownOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
                         <div className="flex flex-col items-center p-2 gap-1">
                             <img
                                 srcSet="Flags/am.svg"

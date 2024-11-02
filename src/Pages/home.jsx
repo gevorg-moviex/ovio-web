@@ -4,11 +4,9 @@ import Cards from "../Components/Cards/cards";
 import Suggestions from "../Components/Suggestions/suggestion";
 import VideoPart from "../Components/VideoPart/videopart";
 import Other from "../Components/Other/other";
-import Channel from "../Components/Channel/channel";
 import News from "../Components/News/news";
 import BottomContact from "../Components/BottomContact/bottomContact";
-import SuggestionsLayout from "../Layouts/SuggestionsLayout";
-
+import ChannelLayout from "../Layouts/SuggestionsLayout";
 
 export default function Home() {
     return (
@@ -19,7 +17,7 @@ export default function Home() {
             <Suggestions />
             <VideoPart />
             <Other />
-            <SuggestionsLayout />
+            <ChannelLayout />
             <News />
             <BottomContact />
         </MainLayout>

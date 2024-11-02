@@ -1,13 +1,20 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.css';
 import { cardsAm } from "../../../dataAm";
+import { cardsEn } from "../../../dataEn";
+import { cardsRu } from "../../../dataRu";
 import { Navigation } from "swiper/modules";
+import { useLanguage } from "../../Context/language";
 
 export default function Cards() {
+    const {language} = useLanguage();
+
+    const data = language == "am" ? cardsAm : language == "ru" ? cardsRu : language == "en" ? cardsEn : null;
+
     return (
         <div className="px-3 mt-16 product340x:px-7 product660x:px-28">
             <div>
-                <h1 className="text-3xl font-bold">{cardsAm.title}</h1>
+                <h1 className="text-3xl font-bold">{data.title}</h1>
             </div>
             <Swiper
                 slidesPerView={1}
@@ -25,13 +32,13 @@ export default function Cards() {
                         spaceBetween: 35,
                     },
                     1420: { 
-                        slidesPerView: 4,
+                        slidesPerView: 3,
                         spaceBetween: 40,
                     },
                 }}
                 className="cursor-grab py-10 rounded-r-[21px]"
             >
-                {cardsAm.products.map((item) => (
+                {data.products.map((item) => (
                     <SwiperSlide key={item.number} className="w-[453px] my-10 rounded-[20px]">
                         <div className="flex gap-5 h-[152px] shadow-lg rounded-[12px] overflow-hidden">
                             <div

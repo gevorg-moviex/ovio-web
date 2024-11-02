@@ -1,7 +1,10 @@
 import { FaEnvelope, FaFacebook, FaInstagram, FaPhone, FaTelegram, FaYoutube } from "react-icons/fa";
 import { footerLinksAm } from "../../../dataAm";
+import { useLanguage } from "../../Context/language";
 
 export default function SlicedFooter(){
+    const {language} = useLanguage();
+
     return (
         <footer className="w-full text-white pt-8 bg-[#101828]">
             <div className="flex flex-col product805x:flex-row justify-around items-center gap-9 pb-14 border-b border-gray-400">
@@ -34,7 +37,7 @@ export default function SlicedFooter(){
             </div>
             <div>
                 <div className="flex justify-center py-3 items-center text-xs">
-                    <p>© 2024. Բոլոր իրավունքները պաշտպանված են:</p>
+                    <p>{language == "am" ? "© 2024. Բոլոր իրավունքները պաշտպանված են:" : language == "ru" ? "© 2024. Все права защищены" : language == "en" ? "© 2024. All rights reserved" : null}</p>
                 </div>
             </div>
         </footer>

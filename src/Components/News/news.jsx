@@ -1,14 +1,21 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { newsAm } from "../../../dataAm";
+import { newsRu } from "../../../dataRu";
 import { Navigation, Pagination } from "swiper/modules";
+import { newsEn } from "../../../dataEn";
+import { useLanguage } from "../../Context/language";
 
 export default function News() {
+    const {language} = useLanguage();
+
+    const data = language == "am" ? newsAm : language == "ru" ? newsRu : language == "en" ? newsEn : null;
+
     return (
         <div className="pl-10 pb-10 mt-24 product560x:pl-20 product1190x:pl-36">
-            <span className="text-3xl font-bold mx-5">{newsAm.title}</span>
+            <span className="text-3xl font-bold mx-5">{data.title}</span>
             <Swiper
-                slidesPerView={4} // Default for large screens
-                spaceBetween={150} // Default space for large screens
+                slidesPerView={4} 
+                spaceBetween={150} 
                 breakpoints={{
                     1568: {
                         slidesPerView: 4,
@@ -40,7 +47,7 @@ export default function News() {
                 className="cursor-grab"
                 style={{ display: "flex", justifyContent: "center" }}
             >
-                {newsAm.products.map((item) => (
+                {data.products.map((item) => (
                     <SwiperSlide key={item.id}>
                         <div className="flex my-10 mx-5 flex-col w-[85%] product1310x:w-[364px] h-[380px] cursor-pointer hover:-translate-y-4 transition-all duration-300 shadow-topSide rounded-[20px]">
                             <div
@@ -59,7 +66,7 @@ export default function News() {
                                 </div>
                                 <div>
                                     <span className="text-sm font-[500]">{item.date}</span>
-                                    <p className="text-xs">{item.description}</p>
+                                    <p className="text-xs">{item.description.length >= 245 ? `${item.description.slice(0, 145)}...` : item.description}</p>
                                 </div>
                             </div>
                         </div>
@@ -68,7 +75,7 @@ export default function News() {
             </Swiper>
             <div className="product885x:w-full">
                 <button className="bg-[#04eed2] w-[90%] product885x:w-auto font-semibold text-black border-none px-7 py-3 rounded-xl hover:text-white outline-none">
-                    Բոլոր նորությունները
+                    {language == "am" ? "Բոլոր նորությունները" : language == "ru" ? "Все новости" : language == "en" ? "All News" : null}
                 </button>
             </div>
         </div>

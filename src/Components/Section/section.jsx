@@ -1,17 +1,23 @@
 import { Pagination } from "swiper/modules";
 import { sectionAm } from "../../../dataAm";
+import { sectionRu } from "../../../dataRu";
+import { sectionEn } from "../../../dataEn";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.css'; 
 import "./section.css";
+import { useLanguage } from "../../Context/language";
 
 export default function Section() {
+    const {language} = useLanguage();
+    const data = language == "am" ? sectionAm : language == "ru" ? sectionRu : language == "en" ? sectionEn : null;
+
     return (
         <div className="w-full mt-14">
             <Swiper
                 pagination={{ clickable: true }}
                 modules={[Pagination]}
             >
-                {sectionAm.map(item => (
+                {data.map(item => (
                     <SwiperSlide key={item.id}>
                         <div className="flex bg-[#53079D] h-[710px] product590x:h-[825px] items-center justify-center product1255x:justify-start gap-11">
                             <div className="w-[70%] text-center items-center product590x:text-left product590x:items-start product1255x:w-[40%] product1255x:pl-20 product1370x:pl-32 flex flex-col gap-9 justify-center">

@@ -1,13 +1,20 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.css';
 import { suggestionsAm } from "../../../dataAm";
+import { suggestionsRu } from "../../../dataRu";
+import { suggestionsEn } from "../../../dataEn";
 import { Navigation } from "swiper/modules";
+import { useLanguage } from "../../Context/language";
 
 export default function Suggestions() {
+    const {language} = useLanguage();
+
+    const data = language == "am" ? suggestionsAm : language == "ru" ? suggestionsRu : language == "en" ? suggestionsEn : null;
+
     return (
         <div className="px-3 mt-4 product340x:px-7 product660x:px-28">
             <div>
-                <h1 className="text-3xl w-full font-bold pb-4">{suggestionsAm.title}</h1>
+                <h1 className="text-3xl w-full font-bold pb-4">{data.title}</h1>
             </div>
             <Swiper
                 slidesPerView={1}
@@ -29,7 +36,7 @@ export default function Suggestions() {
                     },
                 }}
             >
-                {suggestionsAm.products.map((item, index) => (
+                {data.products.map((item, index) => (
                     <SwiperSlide
                         key={item.id}
                         className={`${
@@ -47,7 +54,7 @@ export default function Suggestions() {
                                 <button 
                                     className={`w-auto product1260x:w-[292px] py-3 text-white text-center transition-all duration-300 ${item.id === 1 ? "bg-[#E5326F]" : "bg-[#53079D]"} cursor-pointer text-sm font-semibold rounded-xl hover:brightness-[140%]`}
                                 >
-                                    Իմացի՛ր ավելին
+                                    {language == "am" ? "Իմացի՛ր ավելին" : language == "ru" ? "Подробнее" : language == "en" ? "Learn more" : null}
                                 </button>
                             </div>
                         </div>

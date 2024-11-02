@@ -7,6 +7,7 @@ import Home from './Pages/home';
 import RegisterPage from './Pages/registerPage';
 import LoginPage from './Pages/loginPage';
 import HelpPage from './Pages/helpPage';
+import { LanguageProvider } from './Context/language';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -24,17 +25,19 @@ function App() {
 
   return (
     <>
-      {loading ? 
-          <Loading />  
-        : 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path='/login' element={<LoginPage />} />
-          <Route path='/register' element={<RegisterPage />} />
-          <Route path="/section" element={<Section />} />
-          <Route path="/help" element={<HelpPage />} />
-        </Routes> 
-        }
+      <LanguageProvider>
+        {loading ? 
+            <Loading />  
+          : 
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path='/login' element={<LoginPage />} />
+            <Route path='/register' element={<RegisterPage />} />
+            <Route path="/section" element={<Section />} />
+            <Route path="/help" element={<HelpPage />} />
+          </Routes> 
+          }
+      </LanguageProvider>
     </>
   );
 }

@@ -1,9 +1,16 @@
 import { otherAm } from "../../../dataAm";
+import { otherRu } from "../../../dataRu";
+import { otherEn } from "../../../dataEn";
+import { useLanguage } from "../../Context/language";
 
 export default function Other() {
+    const {language} = useLanguage();
+
+    const data = language == "am" ? otherAm : language == "ru" ? otherRu : language == "en" ? otherEn : null;
+
     return (
         <div className="grid mt-48 grid-cols-1 md:grid-cols-2">
-            {otherAm.map(item => (
+            {data.map(item => (
                 <div 
                     className="relative h-[450px] bg-cover bg-center p-4 flex justify-center items-end pb-16" 
                     key={item.id} 
@@ -18,7 +25,7 @@ export default function Other() {
                             className="w-auto md:w-[292px] py-3 text-white text-center transition-all duration-300 cursor-pointer text-sm font-semibold rounded-xl hover:text-black hover:brightness-[130%]" 
                             style={{ backgroundColor: item.buttonBg }}
                         >
-                            Իմացի՛ր ավելին
+                            {language == "am" ? "Իմացի՛ր ավելին" : language == "ru" ? "Подробнее" : language == "en" ? "Learn more" : null}
                         </button>
                     </div>
                 </div>
