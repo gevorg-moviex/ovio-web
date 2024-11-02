@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaBars, FaTimes, FaUser } from "react-icons/fa";
+import { FaBars, FaBookmark, FaCartPlus, FaTimes, FaUser } from "react-icons/fa";
 import TopSide from "../TopSide/topside";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../Context/language";
@@ -42,11 +42,13 @@ export default function Navbar(){
                     <ul className="flex flex-col gap-5 pt-5 w-full product1260x:pt-0 product1260x:gap-0 product1260x:w-auto  product1260x:flex product1260x:flex-row product1310x:gap-1 product1360x:gap-2 text-[15px]">
                         <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Հատուկ առաջարկներ" : language === "en" ? "Special Offers" : language === "ru" ? "Специальные предложения" : null}</li>
                         <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Տան համար" : language === "en" ? "For home" : language === "ru" ? "Для дома" : null}</li>
-                        <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Բիզնեսի համար" : language === "en" ? "For business" : language === "ru" ? "Для бизнеса" : null}</li>
                         <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Մեր մասին" : language === "en" ? "About us" : language === "ru" ? "О нас" : null}</li>
                         <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Վճարել" : language === "en" ? "Payment" : language === "ru" ? "Оплата" : null}</li>
                         <Link to="/help">
                             <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Օգնություն" : language === "en" ? "Help" : language === "ru" ? "Помощь" : null}</li>
+                        </Link>
+                        <Link to="/basket">
+                            <li className="px-2 border-b pb-2 border-solid text-[#7734b7] border-gray-400 product1260x:border-none cursor-pointer hover:text-black hover:scale-105 font-[700] transition-all duration-300">{language === "am" ? "Զամբյուղ" : language === "en" ? "Basket" : language === "ru" ? "Корзина" : null}</li>
                         </Link>
                     </ul>
                 </nav>

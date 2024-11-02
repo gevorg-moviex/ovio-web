@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { conditionsAm } from "../../../dataAm";
 import { conditionsRu } from "../../../dataRu";
 import { conditionsEn } from "../../../dataEn";
@@ -7,7 +7,7 @@ import { users } from "../../../userInfo";
 import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "../../Context/language";
 
-export default function Login() {
+export default function Login( {loggedIn, setLoggedIn} ) {
     const {language} = useLanguage();
     const [error, setError] = useState(false);
     const [error2, setError2] = useState(false);
@@ -18,6 +18,12 @@ export default function Login() {
     const userPassword = useRef();
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (loggedIn) {
+            navigate("/"); 
+        }
+    }, [loggedIn, navigate]);
 
     const handleLogin = useCallback((e) => {
         e.preventDefault();
@@ -30,6 +36,7 @@ export default function Login() {
 
         if (infoPassport === "" || infoPassword === "") {
             setError(true);
+            setLoggedIn(false);
             return;
         }
 
@@ -40,9 +47,11 @@ export default function Login() {
         if (user || user2) {
             userPassportId.current.value = "";
             userPassword.current.value = "";
-            navigate("/");
+            setLoggedIn(true);
+            navigate("/")
         } else {
             setError2(true);
+            setLoggedIn(false)
             userPassportId.current.value = "";
             userPassword.current.value = "";
         }
