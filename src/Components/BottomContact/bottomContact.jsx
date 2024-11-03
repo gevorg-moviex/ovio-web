@@ -5,9 +5,11 @@ import { bottomContactAm } from "../../../dataAm";
 import { bottomContactEn } from "../../../dataEn";
 import { bottomContactRu } from "../../../dataRu";
 import { useLanguage } from "../../Context/language";
+import { useDarkMode } from "../../Context/darkmode";
 
 export default function BottomContact(){
     const {language} = useLanguage();
+    const {isDarkMode} = useDarkMode();
 
     const data = language == "am" ? bottomContactAm : language == "ru" ? bottomContactRu : language == "en" ? bottomContactEn : null;
 
@@ -28,12 +30,12 @@ export default function BottomContact(){
     return (
         <>
             {openModal && (
-                <div className="modal h-[480px] z-50 rounded-md bg-white pb-3 w-auto ml-4 product420x:ml-0 product420x:w-[350px] fixed right-5 bottom-24 shadow-bottomContact">
-                    <div className="flex flex-col rounded-md bg-white justify-between h-full items-center">
+                <div className={`modal h-[480px] z-50 rounded-md ${isDarkMode ? "bg-black" : "bg-white"} pb-3 w-auto ml-4 product420x:ml-0 product420x:w-[350px] fixed right-5 bottom-24 shadow-bottomContact`}>
+                    <div className={`flex flex-col rounded-md ${isDarkMode ? "bg-black text-white" : "bg-white text-black"} justify-between h-full items-center`}>
                         <div className="text-center pt-5 rounded-md bg-[#450087] w-full px-4 text-white h-[150px] relative">
                             <h4>{data.title}</h4>
                         </div>
-                        <div className="w-5/6 h-[338px] rounded-md bg-white absolute text-[13px] top-[106px] px-4 pb-[15px]">
+                        <div className={`w-5/6 h-[338px] rounded-md absolute text-[13px] top-[106px] px-4 pb-[15px] ${isDarkMode ? "bg-black text-black" : "bg-white"}`}>
                             <div className="flex flex-col gap-5 pt-3">
                                 <input type="text" placeholder={data.inp1} className="h-10 pl-2 border border-solid border-[#d9dbe4] rounded-md outline-none" />
                                 <input type="text" placeholder={data.inp2} className="h-10 pl-2 border border-solid border-[#d9dbe4] rounded-md outline-none" />

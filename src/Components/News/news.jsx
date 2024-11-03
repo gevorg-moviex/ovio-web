@@ -6,16 +6,18 @@ import { newsEn } from "../../../dataEn";
 import { useLanguage } from "../../Context/language";
 import useBookmarkStore from "../../Store/useBookmarkStore";
 import { FaHeart } from "react-icons/fa";
+import { useDarkMode } from "../../Context/darkmode";
 
 export default function News() {
     const { language } = useLanguage();
+    const {isDarkMode} = useDarkMode();
     const { addBookmark, bookmarkNews } = useBookmarkStore();
 
     const data = language === "am" ? newsAm : language === "ru" ? newsRu : language === "en" ? newsEn : null;
     console.log(bookmarkNews);    
 
     return (
-        <div className="pl-10 pb-10 mt-24 product560x:pl-20 product1190x:pl-36">
+        <div className={`pl-10 pb-10 pt-24 ${isDarkMode ? "bg-black text-white" : "bg-white text-black"} product560x:pl-20 product1190x:pl-360`}>
             <span className="text-3xl font-bold mx-5">{data.title}</span>
             <Swiper
                 slidesPerView={4}
@@ -38,7 +40,7 @@ export default function News() {
 
                     return (
                         <SwiperSlide key={item.id}>
-                            <div className="flex my-10 mx-5 flex-col w-[85%] product1310x:w-[364px] h-[380px] cursor-pointer hover:-translate-y-4 transition-all duration-300 shadow-topSide rounded-[20px]">
+                            <div className={`flex my-10 mx-5 flex-col w-[85%] product1310x:w-[364px] h-[380px] cursor-pointer hover:-translate-y-4 transition-all duration-300 ${isDarkMode ? "border border-white" : "bg-white"} shadow-topSide rounded-[20px]`}>
                                 <div
                                     style={{ backgroundImage: `url(${item.imageUrl})` }}
                                     className="bg-cover flex flex-col items-end overflow-visible rounded-t-[20px] bg-center relative h-[50%] z-0"

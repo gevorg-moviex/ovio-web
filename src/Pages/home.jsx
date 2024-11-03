@@ -7,7 +7,7 @@ import Other from "../Components/Other/other";
 import News from "../Components/News/news";
 import BottomContact from "../Components/BottomContact/bottomContact";
 import ChannelLayout from "../Layouts/SuggestionsLayout";
-import Basket from "../Components/Basket/basket";
+import DarkMode from "../Components/DarkMode/darkmode";
 
 export default function Home() {
     return (
@@ -20,8 +20,8 @@ export default function Home() {
             <Other />
             <ChannelLayout />
             <News />
-            <Basket />
             <BottomContact />
+            <DarkMode />
         </MainLayout>
         </>
     )

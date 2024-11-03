@@ -7,9 +7,11 @@ import { Navigation } from "swiper/modules";
 import { useLanguage } from "../../Context/language";
 import useBookmarkStore from "../../Store/useBookmarkStore";
 import { FaHeart } from "react-icons/fa";
+import { useDarkMode } from "../../Context/darkmode";
 
 export default function Cards() {
     const {language} = useLanguage();
+    const {isDarkMode} = useDarkMode();
     const { addBookmark, bookmarkOvio } = useBookmarkStore();
 
     console.log(bookmarkOvio);
@@ -17,7 +19,7 @@ export default function Cards() {
     const data = language == "am" ? cardsAm : language == "ru" ? cardsRu : language == "en" ? cardsEn : null;
 
     return (
-        <div className="px-3 mt-16 product340x:px-7 product660x:px-28">
+        <div className={`px-3 pt-16 ${isDarkMode ? "bg-black text-white" : "bg-white text-black"} product340x:px-7 product660x:px-28`}>
             <div>
                 <h1 className="text-3xl font-bold">{data.title}</h1>
             </div>
@@ -46,7 +48,7 @@ export default function Cards() {
                 {data.products.map((item) => {
                     const isBookmarked = bookmarkOvio.some(bookmark => bookmark.number == item.number);
                     return (
-                        <SwiperSlide key={item.number} className="w-[453px] my-10 rounded-[20px]">
+                        <SwiperSlide key={item.number} className={`w-[453px] ${isDarkMode ? "bg-black text-white border border-white rounded-[21px_120px_120px_21px]" : "bg-white text-black"} my-10 rounded-[20px]`}>
                             <div className="flex gap-5 h-[152px] shadow-lg rounded-[12px] overflow-hidden">
                                 <div
                                     className={`bg-[${item.bgColor}] flex justify-center items-center rounded-[21px_120px_120px_21px] py-2 px-10 text-[44px] font-bold text-white`}

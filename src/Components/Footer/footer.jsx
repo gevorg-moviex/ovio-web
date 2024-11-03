@@ -4,14 +4,16 @@ import { footerLinksEn } from "../../../dataEn";
 import { footerLinksRu } from "../../../dataRu";
 import { useLanguage } from "../../Context/language";
 import { Link } from "react-router-dom";
+import { useDarkMode } from "../../Context/darkmode";
 
 export default function Footer(){
     const {language} = useLanguage();
+    const {isDarkMode} = useDarkMode();
 
     const data = language == "am" ? footerLinksAm : language == "ru" ? footerLinksRu : language == "en" ? footerLinksEn : null;
 
     return (
-        <footer className="w-full text-white py-8 bg-[#101828]">
+        <footer className={`w-full text-white ${isDarkMode ? "bg-black border-t border-white" : "bg-[#101828]"} py-8`}>
             <div className="flex flex-col gap-9">
                 <div className=" flex justify-center product700x:pl-16 product700x:justify-start">
                     <img src="/header-logo.svg" width="130" alt="" />

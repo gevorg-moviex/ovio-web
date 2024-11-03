@@ -4,14 +4,16 @@ import { channelsRu } from "../../../dataRu";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.css';
 import { useLanguage } from "../../Context/language";
+import { useDarkMode } from "../../Context/darkmode";
 
 export default function Channel({ active }) {
     const {language} = useLanguage();
+    const {isDarkMode} = useDarkMode();
 
     const data = language == "am" ? channelsAm : language == "ru" ? channelsRu : language == "en" ? channelsEn : null;
 
     return (
-        <div className="px-4">
+        <div className={`px-4 ${isDarkMode ? "bg-black py-2" : "bg-white"}`}>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={20}

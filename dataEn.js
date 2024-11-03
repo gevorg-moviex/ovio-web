@@ -298,32 +298,32 @@ export const channelsEn = {
             {
                 id: 1,
                 imageUrl: "/Channels/shantTv/shant-1.png",
-                title: "Շանթ TV"
+                title: "Shant TV"
             },
             {
                 id: 2,
                 imageUrl: "/Channels/shantTv/shant-2.png",
-                title: "Շանթ Premium HD"
+                title: "Shant Premium HD"
             },
             {
                 id: 3,
                 imageUrl: "/Channels/shantTv/shant-3.png",
-                title: "Շանթ HD"
+                title: "Shant HD"
             },
             {
                 id: 4,
                 imageUrl: "/Channels/shantTv/shant-4.png",
-                title: "Շանթ Սերիալ HD"
+                title: "Shant Սերիալ HD"
             },
             {
                 id: 5,
                 imageUrl: "/Channels/shantTv/shant-5.png",
-                title: "Շանթ Գյումրի"
+                title: "Shant Գյումրի"
             },
             {
                 id: 6,
                 imageUrl: "/Channels/shantTv/shant-6.png",
-                title: "Շանթ Music HD"
+                title: "Shant Music HD"
             },
             {
                 id: 7,

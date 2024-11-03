@@ -2,14 +2,16 @@ import { otherAm } from "../../../dataAm";
 import { otherRu } from "../../../dataRu";
 import { otherEn } from "../../../dataEn";
 import { useLanguage } from "../../Context/language";
+import { useDarkMode } from "../../Context/darkmode";
 
 export default function Other() {
     const {language} = useLanguage();
+    const {isDarkMode} = useDarkMode();
 
     const data = language == "am" ? otherAm : language == "ru" ? otherRu : language == "en" ? otherEn : null;
 
     return (
-        <div className="grid mt-48 grid-cols-1 md:grid-cols-2">
+        <div className={`grid ${isDarkMode ? "bg-black" : "bg-white"} pt-48 grid-cols-1 md:grid-cols-2`}>
             {data.map(item => (
                 <div 
                     className="relative h-[450px] bg-cover bg-center p-4 flex justify-center items-end pb-16" 

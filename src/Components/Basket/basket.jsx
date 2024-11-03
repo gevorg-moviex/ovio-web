@@ -1,21 +1,24 @@
 import { FaHeart, FaTrash } from "react-icons/fa";
 import useBookmarkStore from "../../Store/useBookmarkStore"
 import { FaDeleteLeft, FaXmark } from "react-icons/fa6";
+import { useLanguage } from "../../Context/language";
+import "./basket.css"
 
 export default function Basket() {
     const { bookmarkNews, bookmarkSuggestions, bookmarkOvio, removeBookmark } = useBookmarkStore();
+    const {language} = useLanguage();
 
     return (
-        <div className="p-5">
-            <h1 className="text-2xl font-bold mb-4">My Bookmarks</h1>
+        <div className="p-5 mt-24">
+            <h1 className="text-2xl font-bold mb-4 text-center">My Bookmarks</h1>
 
             <div>
                 <h2 className="text-2xl font-semibold pb-7">Why Ovio</h2>
-                <div className="flex flex-col gap-4">
+                <div className="flex overflow-x-auto gap-4">
                 {bookmarkOvio.length > 0 ? (
                         bookmarkOvio.map(item => {
                             return (
-                                <div key={item.number} className="flex gap-5 h-[152px] shadow-lg rounded-[12px] relative overflow-hidden">
+                                <div key={item.number} className="flex mb-5 gap-5 h-[152px] min-w-[500px] shadow-lg rounded-[12px] relative overflow-hidden">
                                     <div className={`bg-[${item.bgColor}] flex justify-center items-center rounded-[21px_120px_120px_21px] py-2 px-10 text-[44px] font-bold text-white`}>
                                         <span>{item.number}</span>
                                     </div>
@@ -36,12 +39,12 @@ export default function Basket() {
                 </div>
             </div>
             <div>
-                <h2 className="text-2xl font-semibold pb-7">Suggestions</h2>
-                <div className="flex flex-col gap-4">
+                <h2 className="text-3xl font-semibold mt-10">Suggestions</h2>
+                <div className="flex overflow-x-auto gap-4">
                 {bookmarkSuggestions.length > 0 ? (
                         bookmarkSuggestions.map(item => {
                             return (
-                                <div key={item.id} className={`${'col-span-1 row-start-1'} transition-all duration-500`}>
+                                <div key={item.id} className={`${'col-span-1 row-start-1'} transition-all min-w-[300px] duration-500`}>
                                     <div
                                         className="relative my-10 flex justify-center bg-cover bg-center items-end h-[432px] py-8 px-7 text-white rounded-[20px] hover:-translate-y-5 transition-all duration-500 cursor-pointer w-full product640x:max-w-[348px] product970x:max-w-[448px]"
                                         style={{ backgroundImage: `url(${item.imageUrl})` }}
@@ -57,7 +60,7 @@ export default function Basket() {
                                             <button 
                                                 className={`w-auto product1260x:w-[292px] py-3 text-white text-center transition-all duration-300 ${item.id === 1 ? "bg-[#E5326F]" : "bg-[#53079D]"} cursor-pointer text-sm font-semibold rounded-xl hover:brightness-[140%]`}
                                             >
-                                               aaa {/* {language == "am" ? "Իմացի՛ր ավելին" : language == "ru" ? "Подробнее" : language == "en" ? "Learn more" : null} */}
+                                               {language == "am" ? "Իմացի՛ր ավելին" : language == "ru" ? "Подробнее" : language == "en" ? "Learn more" : null}
                                             </button>
                                         </div>
                                     </div>
@@ -70,7 +73,7 @@ export default function Basket() {
                 </div>
             </div>
             <div>
-                <h2 className="text-3xl font-semibold ml-6">News</h2>
+                <h2 className="text-3xl font-semibold ml-6 mt-10">News</h2>
                 <div className="flex overflow-x-auto gap-4">
                 {bookmarkNews.length > 0 ? (
                         bookmarkNews.map(item => {

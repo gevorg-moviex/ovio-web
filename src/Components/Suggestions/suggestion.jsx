@@ -7,9 +7,12 @@ import { Navigation } from "swiper/modules";
 import { useLanguage } from "../../Context/language";
 import useBookmarkStore from "../../Store/useBookmarkStore";
 import { FaHeart } from "react-icons/fa";
+import { useDarkMode } from "../../Context/darkmode";
 
 export default function Suggestions() {
     const {language} = useLanguage();
+    const {isDarkMode} = useDarkMode();
+
     const { addBookmark, bookmarkSuggestions } = useBookmarkStore();
 
     console.log(bookmarkSuggestions);
@@ -18,7 +21,7 @@ export default function Suggestions() {
     const data = language == "am" ? suggestionsAm : language == "ru" ? suggestionsRu : language == "en" ? suggestionsEn : null;
 
     return (
-        <div className="px-3 mt-4 product340x:px-7 product660x:px-28">
+        <div className={`px-3 ${isDarkMode ? "bg-black text-white" : "bg-white text-black"} pt-4 product340x:px-7 product660x:px-28`}>
             <div>
                 <h1 className="text-3xl w-full font-bold pb-4">{data.title}</h1>
             </div>

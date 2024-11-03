@@ -3,12 +3,14 @@ import { FaBars, FaBookmark, FaCartPlus, FaTimes, FaUser } from "react-icons/fa"
 import TopSide from "../TopSide/topside";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../Context/language";
+import { useDarkMode } from "../../Context/darkmode";
 
 export default function Navbar(){
     const [hamburger, setHamburger] = useState(false);
     const [isFixed, setIsFixed] = useState(false);
 
     const {language} = useLanguage();
+    const {isDarkMode} = useDarkMode();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +33,7 @@ export default function Navbar(){
     }
 
     return (
-        <div className={`flex fixed top-0 ${isFixed ? "product660x:top-0" : "product660x:top-auto" } z-50 bg-white w-full product1260x:p-5 product1360x:px-10 product1455x:px-20 items-center justify-between py-3`}>
+        <div className={`flex ${isDarkMode ? "bg-black text-white" : "bg-white text-black"} fixed top-0 ${isFixed ? "product660x:top-0" : "product660x:top-auto" } z-50 w-full product1260x:p-5 product1360x:px-10 product1455x:px-20 items-center justify-between py-3`}>
             <div>
                 <Link to="/">
                     <img src="/header-logo.svg" alt="" width="200" className="pl-3 product1260x:pl-0" />
@@ -48,7 +50,7 @@ export default function Navbar(){
                             <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Օգնություն" : language === "en" ? "Help" : language === "ru" ? "Помощь" : null}</li>
                         </Link>
                         <Link to="/basket">
-                            <li className="px-2 border-b pb-2 border-solid text-[#7734b7] border-gray-400 product1260x:border-none cursor-pointer hover:text-black hover:scale-105 font-[700] transition-all duration-300">{language === "am" ? "Զամբյուղ" : language === "en" ? "Basket" : language === "ru" ? "Корзина" : null}</li>
+                            <li className="px-2 border-b pb-2 border-solid text-[#7734b7] border-gray-400 product1260x:border-none cursor-pointer hover:text-black hover:-translate-y-2 font-[700] transition-all duration-300">{language === "am" ? "Զամբյուղ" : language === "en" ? "Basket" : language === "ru" ? "Корзина" : null}</li>
                         </Link>
                     </ul>
                 </nav>
@@ -57,11 +59,11 @@ export default function Navbar(){
                     <TopSide />
                 </div>
                 <div>
-                    <Link to="/login" className="flex items-center border-b pb-2 hover:bg-[#51227d] transition-all duration-300 bg-[#2596d7] product1260x:bg-white rounded-xl shadow-topSide product1260x:rounded-none product1260x:shadow-none border-gray-200 flex-col product1465x:flex-row gap-2 product1260x:items-start product1465x:items-center">
+                    <Link to="/login" className={`flex items-center  justify-center pb-1 product1260x:justify-start product1260x:pb-0 border-b gap-2 transition-all duration-300 bg-[#2596d7] ${isDarkMode ? "product1260x:bg-black" : "product1260x:bg-white"}  rounded-xl shadow-topSide`}>
                         <div className="hidden product1260x:inline-block">
                             <FaUser />
                         </div>
-                        <span className="border-b pb-1 w-full text-center text-xl product660x:border-none product660x:w-0 border-gray-300 py-2 text-white product640x:mt-0 product1260x:pt-0">{language === "am" ? "Մուտք" : language === "en" ? "Login" : language === "ru" ? "Вход" : null}</span>
+                        <span className={`border-b pb-1 w-full text-center text-base product660x:border-none product660x:w-0 border-gray-300 py-2 ${isDarkMode ? "bg-black text-white" : "bg-white text=black"} product640x:mt-0 product1260x:pt-0`}>{language === "am" ? "Մուտք" : language === "en" ? "Login" : language === "ru" ? "Вход" : null}</span>
                     </Link>
                         <div className="block w-full product660x:hidden">
                             <button className="mt-3 bg-[#8c33e1] text-white  hover:brightness-[120%] transition-all duration-300 cursor-pointer text-sm font-[600] w-full h-12 rounded-xl border-none outline-none tracking-wider">{language === "am" ? "Միացի՛ր հիմա" : language === "en" ? "Join Now" : language === "ru" ? "Подключись сейчас" : null}</button>
