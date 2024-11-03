@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { useLanguage } from "../../Context/language";
+import { useDarkMode } from "../../Context/darkmode";
 
 export default function SlicedHeader() {
     const { language, changeLanguage } = useLanguage(); 
+    const {isDarkMode} = useDarkMode();
+
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const handleMouseEnter = () => {
@@ -19,7 +22,7 @@ export default function SlicedHeader() {
     };
 
     return (
-        <div className="flex fixed visible top-0 z-50 bg-white px-5 border-b border-gray-200 product460x:px-24 w-full items-center justify-between py-3">
+        <div className={`flex fixed visible top-0 z-50 ${isDarkMode ? "bg-black" : "bg-white"} px-5 border-b border-gray-200 product460x:px-24 w-full items-center justify-between py-3`}>
             <div>
                 <img src="/header-logo.svg" alt="Logo" width="150" className="pl-3 cursor-pointer product1260x:pl-0" />
             </div>
@@ -40,7 +43,7 @@ export default function SlicedHeader() {
                 onMouseLeave={handleMouseLeave} 
                 className={`absolute right-[83px] top-11 bg-white rounded-xl w-14 shadow-topSide mt-1 z-10 transition-opacity duration-300 ${dropdownOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
             >
-                <div className="flex flex-col items-center p-2 gap-1">
+                <div className={`flex flex-col ${isDarkMode ? "bg-black border border-white" : "bg-white"} rounded-xl items-center p-2 gap-1`}>
                     <img
                         srcSet="Flags/am.svg"
                         alt="Armenia flag"

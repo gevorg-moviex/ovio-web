@@ -1,12 +1,14 @@
 import { FaEnvelope, FaFacebook, FaInstagram, FaPhone, FaTelegram, FaYoutube } from "react-icons/fa";
 import { footerLinksAm } from "../../../dataAm";
 import { useLanguage } from "../../Context/language";
+import { useDarkMode } from "../../Context/darkmode";
 
 export default function SlicedFooter(){
     const {language} = useLanguage();
+    const {isDarkMode} = useDarkMode();
 
     return (
-        <footer className="w-full text-white pt-8 bg-[#101828]">
+        <footer className={`w-full text-white pt-8 ${isDarkMode ? "bg-black" : "bg-[#101828]"}`}>
             <div className="flex flex-col product805x:flex-row justify-around items-center gap-9 pb-14 border-b border-gray-400">
                 <div className=" flex justify-center">
                     <img src="/header-logo.svg" width="130" alt="" />

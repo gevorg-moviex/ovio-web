@@ -4,9 +4,12 @@ import { conditionsRu } from "../../../dataRu";
 import { conditionsEn } from "../../../dataEn";
 import { useNavigate } from "react-router";
 import { useLanguage } from "../../Context/language";
+import { useDarkMode } from "../../Context/darkmode";
 
     export default function Register() {
         const {language} = useLanguage();
+        const {isDarkMode} = useDarkMode();
+
         const [modal, setModal] = useState(false);
         const [checked, isChecked] = useState(false);
         const [error, setError] = useState(false);
@@ -52,13 +55,13 @@ import { useLanguage } from "../../Context/language";
         },[checked])
 
         return (
-            <div className="py-8 h-[72vh] flex justify-center items-center text-[#101828]">
+            <div className={`py-8 h-[72vh] flex justify-center items-center ${isDarkMode ? "bg-black text-white" : "bg-white text-[#101828]"}`}>
                 {modal && (
                     <div className="w-full px-4 product560x:px-0 fixed flex justify-center items-center z-50 inset-0 bg-black bg-opacity-60">
-                        <div className="w-[404px] rounded-xl h-auto px-3 py-4 product560x:py-0 product560x:h-[390px] bg-white flex flex-col gap-6 product560x:px-4 text-center justify-center items-center">
-                            <span className="font-semibold">{data.title}</span>
-                            <p className="text-xs text-[#555050] font-semibold">{data.description}</p>
-                            <button onClick={() => setModal(false)} className="text-[#212529] font-semibold text-sm py-3 px-5 border border-[#c6cdd3] rounded-xl">{data.buttonContent}</button>
+                        <div className={`w-[404px] rounded-xl h-auto px-3 ${isDarkMode ? "bg-black border border-white" : "bg-white"} py-4 product560x:py-0 product560x:h-[390px] flex flex-col gap-6 product560x:px-4 text-center justify-center items-center`}>
+                            <span className={`font-semibold ${isDarkMode ? "text-white" : "text-black"}`}>{data.title}</span>
+                            <p className={`text-xs ${isDarkMode ? "text-white" : "text-[#555050]"} font-semibold`}>{data.description}</p>
+                            <button onClick={() => setModal(false)} className={`${isDarkMode ? "text-white" : "text-[#555050]"} font-semibold text-sm py-3 px-5 border border-[#c6cdd3] rounded-xl`}>{data.buttonContent}</button>
                         </div>
                     </div>
                 )}
@@ -66,14 +69,14 @@ import { useLanguage } from "../../Context/language";
                     <div className="flex flex-col gap-3">
                         <div className="flex flex-col gap-1">
                             <label htmlFor="passportId">{data.titleInputFirst}</label>
-                            <input type="text" ref={passportId} autoComplete="username" className="border focus:shadow-register transition-all duration-200 border-[#e3e8ec] h-11 pl-2 rounded-md outline-none" name="" id="passportId" />
+                            <input type="text" ref={passportId} placeholder={data.titleInputFirst} autoComplete="username" className={`border focus:shadow-register ${isDarkMode ? "bg-transparent text-white" : "bg-white"} transition-all duration-200 border-[#e3e8ec] h-14 pl-2 rounded-xl outline-none" name="" id="passportId`} />
                             {error && (
                                 <span className="text-xs text-red-600">{data.error1}</span>
                             )}
                         </div>
                         <div className="flex flex-col gap-1">
                             <label htmlFor="password">{data.titleInputSecond}</label>
-                            <input type="password" autoComplete="current-password" ref={passwordUser} placeholder="**********" className="border border-[#e3e8ec] placeholder:opacity-90 placeholder:text-[#233353] focus:shadow-register transition-all duration-200 h-11 pl-2 rounded-md outline-none" id="password" />
+                            <input type="password" autoComplete="current-password" ref={passwordUser} placeholder="**********" className={`border border-[#e3e8ec] placeholder:opacity-90 placeholder:text-[#233353] ${isDarkMode ? "bg-transparent text-white" : "bg-white"} focus:shadow-register transition-all duration-200 h-14 pl-2 rounded-xl outline-none" id="password`} />
                             {error && (
                                 <span className="text-xs text-red-600">{data.error2}</span>
                             )}

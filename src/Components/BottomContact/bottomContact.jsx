@@ -37,10 +37,10 @@ export default function BottomContact(){
                         </div>
                         <div className={`w-5/6 h-[338px] rounded-md absolute text-[13px] top-[106px] px-4 pb-[15px] ${isDarkMode ? "bg-black text-black" : "bg-white"}`}>
                             <div className="flex flex-col gap-5 pt-3">
-                                <input type="text" placeholder={data.inp1} className="h-10 pl-2 border border-solid border-[#d9dbe4] rounded-md outline-none" />
-                                <input type="text" placeholder={data.inp2} className="h-10 pl-2 border border-solid border-[#d9dbe4] rounded-md outline-none" />
-                                <input type="text" placeholder={data.inp3} className="h-10 pl-2 border border-solid border-[#d9dbe4] rounded-md outline-none" />
-                                <input type="text" placeholder={data.inp4} className="h-20 border pl-2 border-solid border-[#d9dbe4] rounded-md outline-none" />
+                                <input type="text" placeholder={data.inp1} className={`h-10 ${isDarkMode ? "bg-transparent text-white" : "bg-white text-black"} pl-2 border border-solid border-[#d9dbe4] rounded-md outline-none`} />
+                                <input type="text" placeholder={data.inp2} className={`h-10 ${isDarkMode ? "bg-transparent text-white" : "bg-white text-black"} pl-2 border border-solid border-[#d9dbe4] rounded-md outline-none`} />
+                                <input type="text" placeholder={data.inp3} className={`h-10 ${isDarkMode ? "bg-transparent text-white" : "bg-white text-black"} pl-2 border border-solid border-[#d9dbe4] rounded-md outline-none`} />
+                                <input type="text" placeholder={data.inp4} className={`h-20 ${isDarkMode ? "bg-transparent text-white" : "bg-white text-black"} border pl-2 border-solid border-[#d9dbe4] rounded-md outline-none`} />
                                 <button className="bg-[#450087] w-full text-base rounded-md h-10 gap-2 text-white flex justify-center items-center text-center">
                                     <FaEnvelope /> {data.button}
                                 </button>
@@ -50,7 +50,7 @@ export default function BottomContact(){
                     </div>
                 </div>
             )}
-            <div onClick={toggleModal} className="bg-[#450087] cursor-pointer fixed z-50 flex justify-center items-center w-[60px] h-[60px] bottom-7 rounded-full right-7">
+            <div onClick={toggleModal} className={`${isDarkMode ? "bg-gray-900" : "bg-[#450087]"} cursor-pointer fixed z-50 flex justify-center items-center w-[60px] h-[60px] bottom-7 rounded-full right-7`}>
                 {openModal ? <FaXmark className="w-8 h-8 text-white" /> : <FaMessage className="w-8 h-8 text-white" /> }
             </div>
         </>   

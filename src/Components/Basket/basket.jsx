@@ -3,13 +3,15 @@ import useBookmarkStore from "../../Store/useBookmarkStore"
 import { FaDeleteLeft, FaXmark } from "react-icons/fa6";
 import { useLanguage } from "../../Context/language";
 import "./basket.css"
+import { useDarkMode } from "../../Context/darkmode";
 
 export default function Basket() {
     const { bookmarkNews, bookmarkSuggestions, bookmarkOvio, removeBookmark } = useBookmarkStore();
     const {language} = useLanguage();
+    const {isDarkMode} = useDarkMode();
 
     return (
-        <div className="p-5 mt-24">
+        <div className={`p-5 pt-24 ${isDarkMode ? "bg-black text-white" : "bg-white text-black"}`}>
             <h1 className="text-2xl font-bold mb-4 text-center">My Bookmarks</h1>
 
             <div>
@@ -18,7 +20,7 @@ export default function Basket() {
                 {bookmarkOvio.length > 0 ? (
                         bookmarkOvio.map(item => {
                             return (
-                                <div key={item.number} className="flex mb-5 gap-5 h-[152px] min-w-[500px] shadow-lg rounded-[12px] relative overflow-hidden">
+                                <div key={item.number} className={`flex mb-5 gap-5 h-[152px] ${isDarkMode ? "border border-white" : "border-none"} min-w-[500px] shadow-lg rounded-[12px] relative overflow-hidden`}>
                                     <div className={`bg-[${item.bgColor}] flex justify-center items-center rounded-[21px_120px_120px_21px] py-2 px-10 text-[44px] font-bold text-white`}>
                                         <span>{item.number}</span>
                                     </div>
@@ -79,7 +81,7 @@ export default function Basket() {
                         bookmarkNews.map(item => {
                             return (
                                 <div key={item.id}>
-                                    <div className="flex my-10 mx-0 product560x:mx-5 flex-col w-[300px] product460x:w-[364px] h-[380px] cursor-pointer hover:-translate-y-4 transition-all duration-300 shadow-topSide rounded-[20px]">
+                                    <div className={`flex ${isDarkMode ? "border border-white" : "border-none"} my-10 mx-0 product560x:mx-5 flex-col w-[300px] product460x:w-[364px] h-[380px] cursor-pointer hover:-translate-y-4 transition-all duration-300 shadow-topSide rounded-[20px]`}>
                                         <div
                                             style={{ backgroundImage: `url(${item.imageUrl})` }}
                                             className="bg-cover flex flex-col items-end overflow-visible rounded-t-[20px] bg-center relative h-[50%] z-0"
