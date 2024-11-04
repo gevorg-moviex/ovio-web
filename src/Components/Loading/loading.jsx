@@ -1,8 +1,12 @@
+import { useLanguage } from "../../Context/language";
+
 const Loader = () => {
+    const {language} = useLanguage();
+
     return (
-      <div className="bg-[#eaecfa] h-screen flex items-center justify-center">
+      <div className={`bg-[#eaecfa] h-screen flex items-center justify-center`}>
         <div className="relative w-[250px] h-[50px] flex items-center justify-center text-lg font-extrabold text-[#22127a] uppercase tracking-wide">
-          Loading...
+          {language == "am" ? "Սպասեք․․․" : language == "en" ? "Loading..." : language == "ru" ? "Загрузка..." : null}
           <div className="absolute top-0 left-0 w-[15px] h-[15px] bg-[#22127a] animate-load"></div>
           <div className="absolute bottom-0 left-0 w-[15px] h-[15px] bg-[#22127a] animate-load"></div>
         </div>

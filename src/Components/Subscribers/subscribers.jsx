@@ -55,7 +55,8 @@ export default function Subscribers() {
                             <td className={`border py-2 px-5 ${isDarkMode ? "border-gray-600" : "border-gray-300"}`}>{item.surname}</td>
                             <td className={`border py-2 px-5 ${isDarkMode ? "border-gray-600" : "border-gray-300"}`}>{item.email}</td>
                         </tr>
-                    ))}
+                    ))
+                    }
                 </tbody>
             </table>
             </div>

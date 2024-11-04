@@ -39,7 +39,7 @@ export default function Navbar(){
                     <img src="/header-logo.svg" alt="" width="200" className="pl-3 product1260x:pl-0" />
                 </Link>
             </div>
-            <div className={`${hamburger ? "block h-screen fixed z-50 pb-5 bg-white top-[70px]" : "hidden"} product1260x:flex items-center justify-center gap-5 w-full px-2`}>
+            <div className={`${hamburger ? "block h-screen fixed z-50 pb-5  top-[70px]" : "hidden"} ${isDarkMode ? "bg-black" : "bg-white"} product1260x:flex items-center justify-center gap-5 w-full px-2`}>
                 <nav>
                     <ul className="flex flex-col gap-5 pt-5 w-full product1260x:pt-0 product1260x:gap-0 product1260x:w-auto  product1260x:flex product1260x:flex-row product1310x:gap-1 product1360x:gap-2 text-[15px]">
                         <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Հատուկ առաջարկներ" : language === "en" ? "Special Offers" : language === "ru" ? "Специальные предложения" : null}</li>
@@ -52,7 +52,7 @@ export default function Navbar(){
                             <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Օգնություն" : language === "en" ? "Help" : language === "ru" ? "Помощь" : null}</li>
                         </Link>
                         <Link to="/basket">
-                            <li className="px-2 border-b pb-2 border-solid text-[#7734b7] border-gray-400 product1260x:border-none cursor-pointer hover:text-black hover:-translate-y-2 font-[700] transition-all duration-300">{language === "am" ? "Զամբյուղ" : language === "en" ? "Basket" : language === "ru" ? "Корзина" : null}</li>
+                            <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Զամբյուղ" : language === "en" ? "Basket" : language === "ru" ? "Корзина" : null}</li>
                         </Link>
                     </ul>
                 </nav>
