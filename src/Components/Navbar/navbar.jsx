@@ -45,7 +45,9 @@ export default function Navbar(){
                         <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Հատուկ առաջարկներ" : language === "en" ? "Special Offers" : language === "ru" ? "Специальные предложения" : null}</li>
                         <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Տան համար" : language === "en" ? "For home" : language === "ru" ? "Для дома" : null}</li>
                         <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Մեր մասին" : language === "en" ? "About us" : language === "ru" ? "О нас" : null}</li>
-                        <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Վճարել" : language === "en" ? "Payment" : language === "ru" ? "Оплата" : null}</li>
+                        <Link to="/subscribers">
+                            <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Բաժանորդներ" : language === "en" ? "Subscribers" : language === "ru" ? "Подписчики" : null}</li>
+                        </Link>
                         <Link to="/help">
                             <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Օգնություն" : language === "en" ? "Help" : language === "ru" ? "Помощь" : null}</li>
                         </Link>
