@@ -55,7 +55,7 @@ import { useDarkMode } from "../../Context/darkmode";
         },[checked])
 
         return (
-            <div className={`py-8 h-[72vh] flex justify-center items-center ${isDarkMode ? "bg-black text-white" : "bg-white text-[#101828]"}`}>
+            <div className={`py-8 h-[76vh] flex justify-center items-center ${isDarkMode ? "bg-black text-white" : "bg-white text-[#101828]"}`}>
                 {modal && (
                     <div className="w-full px-4 product560x:px-0 fixed flex justify-center items-center z-50 inset-0 bg-black bg-opacity-60">
                         <div className={`w-[404px] rounded-xl h-auto px-3 ${isDarkMode ? "bg-black border border-white" : "bg-white"} py-4 product560x:py-0 product560x:h-[390px] flex flex-col gap-6 product560x:px-4 text-center justify-center items-center`}>
