@@ -629,3 +629,51 @@ export const subscribersEn = [
     { "name": "Arthur", "surname": "Khalatyan", "email": "arthur.khalatyan@example.com" }
 ]
 
+export const phoneServiceEn = {
+    section: {
+        sectionTitle: "Welcome to the telephone service area!",
+        sectionDesc: "Make transactions with one call!",
+        sectionImg: "/Section/section-11.jfif",
+    },
+    desc: {
+        descTop: "Call 060 46 00 00, and we will provide you with any of the services mentioned below;",
+        descBottom: "Telephone Service is Convenient",
+        descwithBottom: "Get fast, high-quality and secure service via a single call."
+    },
+    items: [
+        {
+            id: 1,
+            title: "Contract prolongation",
+            desc: "Stay with us.",
+        },
+        {
+            id: 2,
+            title: "Service activation/termination",
+            desc: "Haven't used all of our services yet?",
+        },
+        {
+            id: 3,
+            title: "Temporary suspension/termination of the suspension of the service",
+            desc: "Go on vacation in peace, your internet is temporarily suspended.",
+        },
+        {
+            id: 4,
+            title: "Tariff plan change",
+            desc: "Have you tried our new tariff yet?",
+        },
+        {
+            id: 5,
+            title: "Reservation of In-house technical support services",
+            desc: "Our experienced professionals will visit your apartment.",
+        },
+        {
+            id: 6,
+            title: "Address Change",
+            desc: "We are coming with you to your new apartment.",
+        },
+    ],
+    contact: {
+        first: "Activate Service",
+        second: "Call Now"
+    }
+}

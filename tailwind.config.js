@@ -11,6 +11,7 @@ export default {
         "product1770x": "1455px",
         "product1520x": "1520px",
         "product1465x": "1465px",
+        "product1420x": "1420px",
         "product1370x": "1370px",
         "product1360x": "1360px",
         "product1310x": "1310px",
@@ -46,7 +47,8 @@ export default {
         "topSide": "0 9px 45px 0 rgba(0,0,0,.2)",
         "bottomContact": "rgba(0, 0, 0, 0.24) 0px 3px 8px",
         "headerBottom": "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-        "register": "0 0 0 .2rem rgba(83, 7, 157, .25)"
+        "register": "0 0 0 .2rem rgba(83, 7, 157, .25)",
+        "phoneService" : "0 8px 30px 0 rgba(0, 0, 0, .15)",
       },
       gridAutoColumns: {
         "3xauto": "repeat(3, auto)",

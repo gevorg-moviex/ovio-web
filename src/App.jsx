@@ -11,6 +11,7 @@ import { LanguageProvider } from './Context/language';
 import BasketPage from './Pages/basketPage';
 import { DarkModeProvider } from './Context/darkmode';
 import SubscribersPage from './Pages/subscribersPage';
+import PhoneServicePage from './Pages/phoneSevicePage';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -42,6 +43,7 @@ function App() {
                 <Route path="/help" element={isLoggedIn ? <HelpPage /> : <Navigate to="/login" />} />
                 <Route path="/basket" element={isLoggedIn ? <BasketPage /> : <Navigate to="/login" />} />
                 <Route path="/subscribers" element={isLoggedIn ? <SubscribersPage /> : <Navigate to="/login" />} />
+                <Route path="/phoneService" element={isLoggedIn ? <PhoneServicePage /> : <Navigate to="/login" />} />
               </Routes> 
             }
           </DarkModeProvider>

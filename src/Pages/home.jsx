@@ -8,6 +8,7 @@ import News from "../Components/News/news";
 import BottomContact from "../Components/BottomContact/bottomContact";
 import ChannelLayout from "../Layouts/SuggestionsLayout";
 import DarkMode from "../Components/DarkMode/darkmode";
+import PhoneService from "../Components/PhoneService/phoneService";
 
 export default function Home() {
     return (
@@ -22,6 +23,7 @@ export default function Home() {
             <News />
             <BottomContact />
             <DarkMode />
+            <PhoneService />
         </MainLayout>
         </>
     )
