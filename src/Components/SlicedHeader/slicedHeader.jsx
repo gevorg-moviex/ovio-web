@@ -41,7 +41,7 @@ export default function SlicedHeader() {
             <div
                 onMouseEnter={handleMouseEnter} 
                 onMouseLeave={handleMouseLeave} 
-                className={`absolute right-[83px] top-11 bg-white rounded-xl w-14 shadow-topSide mt-1 z-10 transition-opacity duration-300 ${dropdownOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+                className={`absolute right-2 product460x:right-[83px] top-11 bg-white rounded-xl w-14 shadow-topSide mt-1 z-10 transition-opacity duration-300 ${dropdownOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
             >
                 <div className={`flex flex-col ${isDarkMode ? "bg-black border border-white" : "bg-white"} rounded-xl items-center p-2 gap-1`}>
                     <img
