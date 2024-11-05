@@ -14,8 +14,6 @@ export default function Cards() {
     const {isDarkMode} = useDarkMode();
     const { addBookmark, bookmarkOvio } = useBookmarkStore();
 
-    console.log(bookmarkOvio);
-
     const data = language == "am" ? cardsAm : language == "ru" ? cardsRu : language == "en" ? cardsEn : null;
 
     return (

@@ -14,7 +14,6 @@ export default function News() {
     const { addBookmark, bookmarkNews } = useBookmarkStore();
 
     const data = language === "am" ? newsAm : language === "ru" ? newsRu : language === "en" ? newsEn : null;
-    console.log(bookmarkNews);    
 
     return (
         <div className={`pl-10 pb-10 pt-24 ${isDarkMode ? "bg-black text-white" : "bg-white text-black"} product560x:pl-20 product1190x:pl-360`}>

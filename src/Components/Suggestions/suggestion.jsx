@@ -13,10 +13,7 @@ export default function Suggestions() {
     const {language} = useLanguage();
     const {isDarkMode} = useDarkMode();
 
-    const { addBookmark, bookmarkSuggestions } = useBookmarkStore();
-
-    console.log(bookmarkSuggestions);
-    
+    const { addBookmark, bookmarkSuggestions } = useBookmarkStore();    
 
     const data = language == "am" ? suggestionsAm : language == "ru" ? suggestionsRu : language == "en" ? suggestionsEn : null;
 
