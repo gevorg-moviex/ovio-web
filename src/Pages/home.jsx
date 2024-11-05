@@ -23,7 +23,6 @@ export default function Home() {
             <News />
             <BottomContact />
             <DarkMode />
-            <PhoneService />
         </MainLayout>
         </>
     )
