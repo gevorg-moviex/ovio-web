@@ -742,3 +742,38 @@ export const forHomeListsRu = [
         path: "/telephony"
     }
 ]
+
+export const specialOffersListsRu = {
+    links: [
+        {
+            id: 1,
+            title: "Все акции",
+            path: "specialOffers",
+        },
+        {
+            id: 2,
+            title: "Скидка 50% на 3 месяца",
+            path: "specialOffer",
+        },
+        {
+            id: 3,
+            title: "PowerPlay игровой сервис",
+            path: "powerPlay",
+        },
+        {
+            id: 4,
+            title: "Веселые выходные",
+            path: "happyWeekend",
+        },
+        {
+            id: 5,
+            title: "OVIO - Вега",
+            path: "ovioVega",
+        },
+    ],
+    img: {
+        imgUrl: "/Section/section-1.png",
+        title: "Подключись к All in годовому III пакету ♡ по 4950 драм вместо 9900",
+        desc: "скорость до 300 Мбит/с, 180+ каналов, 25 000 фильмов и сериалов  со скидкой 50% на 3 месяца"
+    }
+}

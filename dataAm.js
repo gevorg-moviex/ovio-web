@@ -764,3 +764,38 @@ export const forHomeListsAm = [
         path: "/telephony"
     }
 ]
+
+export const specialOffersListsAm = {
+    links: [
+        {
+            id: 1,
+            title: "Բոլորը",
+            path: "specialOffers",
+        },
+        {
+            id: 2,
+            title: "3 ամիս 50% զեղչ",
+            path: "specialOffer",
+        },
+        {
+            id: 3,
+            title: "PowerPlay խաղային ծառայություն",
+            path: "powerPlay",
+        },
+        {
+            id: 4,
+            title: "Ուրախ շաբաթ-կիրակի",
+            path: "happyWeekend",
+        },
+        {
+            id: 5,
+            title: "OVIO - Վեգա",
+            path: "ovioVega",
+        },
+    ],
+    img: {
+        imgUrl: "/Section/section-1.png",
+        title: "Միացի՛ր All in տարեկան III-ին ♡  4950 դրամով՝ 9900-ի փոխարեն",
+        desc: "մինչև 300 Մբ/վ արագություն, 180+ ալիք, 25 000 ֆիլմ և սերիալ 3 ամիս 50% զեղչով"
+    }
+}

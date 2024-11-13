@@ -715,3 +715,38 @@ export const forHomeListsEn = [
         path: "/telephony"
     }
 ]
+
+export const specialOffersListsEn = {
+    links: [
+        {
+            id: 1,
+            title: "All",
+            path: "specialOffers",
+        },
+        {
+            id: 2,
+            title: "50% discount for 3 months",
+            path: "specialOffer",
+        },
+        {
+            id: 3,
+            title: "PowerPlay gaming service",
+            path: "powerPlay",
+        },
+        {
+            id: 4,
+            title: "Happy Weekend",
+            path: "happyWeekend",
+        },
+        {
+            id: 5,
+            title: "OVIO - Vega",
+            path: "ovioVega",
+        },
+    ],
+    img: {
+        imgUrl: "/Section/section-1.png",
+        title: "Join All in annual III ♡ with 4950 drams instead of 9900",
+        desc: "speed up to 300 Mb/s, 180+ channels, 25,000 movies and series for 3 months with 50% discount"
+    }
+}
