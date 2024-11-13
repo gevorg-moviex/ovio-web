@@ -677,3 +677,41 @@ export const phoneServiceEn = {
         second: "Call Now"
     }
 }
+
+export const forHomeListsEn = [
+    {
+        id: 1,
+        title: "All",
+        path: "/forHome"
+    },
+    {
+        id: 2,
+        title: "Wink TV Platform",
+        path: "/wink"
+    },
+    {
+        id: 3,
+        title: "All in packages",
+        path: "/allIncludedPackages"
+    },
+    {
+        id: 4,
+        title: "Video surveillance",
+        path: "/videoSurveillance"
+    },
+    {
+        id: 5,
+        title: "Internet",
+        path: "/internet"
+    },
+    {
+        id: 6,
+        title: "Smart  TV",
+        path: "/winkSmartTv"
+    },
+    {
+        id: 7,
+        title: "Phone",
+        path: "/telephony"
+    }
+]

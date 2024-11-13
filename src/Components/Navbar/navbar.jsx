@@ -1,16 +1,22 @@
-import { useEffect, useState } from "react";
+ import { useEffect, useState } from "react";
 import { FaBars, FaBookmark, FaCartPlus, FaTimes, FaUser } from "react-icons/fa";
 import TopSide from "../TopSide/topside";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../Context/language";
 import { useDarkMode } from "../../Context/darkmode";
+import { forHomeListsAm } from "../../../dataAm";
+import { forHomeListsEn } from "../../../dataEn";
+import { forHomeListsRu } from "../../../dataRu";
 
 export default function Navbar(){
     const [hamburger, setHamburger] = useState(false);
     const [isFixed, setIsFixed] = useState(false);
+    const [forHome, setForHome] = useState(false);
 
     const {language} = useLanguage();
     const {isDarkMode} = useDarkMode();
+
+    const data = language == "am" ? forHomeListsAm : language == "ru" ? forHomeListsRu : language == "en" ? forHomeListsEn : null;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +37,14 @@ export default function Navbar(){
     const toggleHamburger = () => {
         setHamburger(prev => !prev)
     }
+    
+    const handlMouseMove = () => {
+        setForHome(true)
+    }
+
+    const handlMouseLeave = () => {
+        setForHome(false)
+    }
 
     return (
         <div className={`flex ${isDarkMode ? "bg-black text-white" : "bg-white text-black"} fixed top-0 ${isFixed ? "product660x:top-0" : "product660x:top-auto" } z-50 w-full product1260x:p-5 product1360x:px-10 product1455x:px-20 items-center justify-between py-3`}>
@@ -43,7 +57,20 @@ export default function Navbar(){
                 <nav>
                     <ul className="flex flex-col gap-5 pt-5 w-full product1260x:pt-0 product1260x:gap-0 product1260x:w-auto  product1260x:flex product1260x:flex-row product1310x:gap-1 product1360x:gap-2 text-[15px]">
                         <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Հատուկ առաջարկներ" : language === "en" ? "Special Offers" : language === "ru" ? "Специальные предложения" : null}</li>
-                        <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Տան համար" : language === "en" ? "For home" : language === "ru" ? "Для дома" : null}</li>
+                        <div>
+                            <li onMouseMove={handlMouseMove} onMouseLeave={handlMouseLeave} className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Տան համար" : language === "en" ? "For home" : language === "ru" ? "Для дома" : null}</li>
+                            {forHome && (
+                                <div onMouseMove={handlMouseMove} onMouseLeave={handlMouseLeave} className={`absolute ${isDarkMode ? "bg-black border border-gray-100 text-white" : "bg-white border-gray-200 text-black"} shadow-topSide border text-[15.4px] rounded-xl p-10 max-h-[244px] transition-opacity duration-300 ${forHome ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
+                                    <ul className="grid grid-cols-2 gap-7">
+                                        {data.map(item => (
+                                            <li key={item.id}>
+                                                <Link to={item.path} className={`${isDarkMode ? "hover:text-[#04eed2]" : "hover:text-[#53079d]"} transition-all duration-300`}>{item.title}</Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
                         <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Մեր մասին" : language === "en" ? "About us" : language === "ru" ? "О нас" : null}</li>
                         <Link to="/subscribers">
                             <li className="px-2 border-b pb-2 border-solid border-gray-400 product1260x:border-none cursor-pointer hover:text-[#7734b7] font-[700] transition-all duration-300">{language === "am" ? "Բաժանորդներ" : language === "en" ? "Subscribers" : language === "ru" ? "Подписчики" : null}</li>

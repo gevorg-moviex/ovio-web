@@ -726,3 +726,41 @@ export const phoneServiceAm = {
         second: "Զանգել հիմա"
     }
 }
+
+export const forHomeListsAm = [
+    {
+        id: 1,
+        title: "Բոլորը",
+        path: "/forHome"
+    },
+    {
+        id: 2,
+        title: "Wink TV հարթակ",
+        path: "/wink"
+    },
+    {
+        id: 3,
+        title: "All in փաթեթներ",
+        path: "/allIncludedPackages"
+    },
+    {
+        id: 4,
+        title: "Տեսահսկում",
+        path: "/videoSurveillance"
+    },
+    {
+        id: 5,
+        title: "Ինտերնետ",
+        path: "/internet"
+    },
+    {
+        id: 6,
+        title: "Սմարթ հեռուստատեսություն",
+        path: "/winkSmartTv"
+    },
+    {
+        id: 7,
+        title: "Հեռախոսակապ",
+        path: "/telephony"
+    }
+]

@@ -704,3 +704,41 @@ export const phoneServiceRu = {
         second: "Позвонить сейчас"
     }
 }
+
+export const forHomeListsRu = [
+    {
+        id: 1,
+        title: "Всe",
+        path: "/forHome"
+    },
+    {
+        id: 2,
+        title: "TV платформа Wink",
+        path: "/wink"
+    },
+    {
+        id: 3,
+        title: "All in пакеты",
+        path: "/allIncludedPackages"
+    },
+    {
+        id: 4,
+        title: "Видеонаблюдение",
+        path: "/videoSurveillance"
+    },
+    {
+        id: 5,
+        title: "Интернет",
+        path: "/internet"
+    },
+    {
+        id: 6,
+        title: "Смарт телевидение",
+        path: "/winkSmartTv"
+    },
+    {
+        id: 7,
+        title: "Телефония",
+        path: "/telephony"
+    }
+]
