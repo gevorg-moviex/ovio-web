@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { conditionsAm } from "../../../dataAm";
 import { conditionsRu } from "../../../dataRu";
 import { conditionsEn } from "../../../dataEn";
-import { FaIdCard, FaLock } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaIdCard, FaLock } from "react-icons/fa";
 import { users } from "../../../userInfo";
 import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "../../Context/language";
@@ -14,6 +14,7 @@ export default function Login( {loggedIn, setLoggedIn} ) {
 
     const [error, setError] = useState(false);
     const [error2, setError2] = useState(false);
+    const [show, setShow] = useState(false);
 
     const data = language == "am" ? conditionsAm : language == "ru" ? conditionsRu : conditionsEn
 
@@ -27,6 +28,10 @@ export default function Login( {loggedIn, setLoggedIn} ) {
             navigate("/"); 
         }
     }, [loggedIn, navigate]);
+
+    const showHide = () => {
+        setShow(!show)
+    }
 
     const handleLogin = useCallback((e) => {
         e.preventDefault();
@@ -79,12 +84,13 @@ export default function Login( {loggedIn, setLoggedIn} ) {
                     <div className="flex flex-col relative gap-1 text-[#858585]">
                         <FaLock className="absolute text-lg left-4 top-5" />
                         <input 
-                            type="password" 
+                            type={show ? "text" : "password"} 
                             autoComplete="current-password" 
                             ref={userPassword} 
                             placeholder={data.titleInputSecond} 
                             className={`border border-[#e3e8ec] focus:shadow-register ${isDarkMode ? "bg-transparent text-white" : "bg-white text-[#101828]"} transition-all duration-200 h-14 text-base pl-11 rounded-xl outline-none`}
                         />
+                        {show ? <FaEye onClick={showHide} className="absolute text-xl cursor-pointer right-4 top-5" /> : <FaEyeSlash className="absolute text-xl cursor-pointer right-4 top-5" onClick={showHide} /> }
                         {error && <span className="text-xs text-red-600">{data.error2}</span>}
                         {error2 && <span className="text-xs text-red-600">{data.loginError}</span>}
                     </div>

@@ -5,6 +5,7 @@ import { conditionsEn } from "../../../dataEn";
 import { useNavigate } from "react-router";
 import { useLanguage } from "../../Context/language";
 import { useDarkMode } from "../../Context/darkmode";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
     export default function Register() {
         const {language} = useLanguage();
@@ -13,6 +14,7 @@ import { useDarkMode } from "../../Context/darkmode";
         const [modal, setModal] = useState(false);
         const [checked, isChecked] = useState(false);
         const [error, setError] = useState(false);
+        const [show, setShow] = useState(false);
 
         const data = language == "am" ? conditionsAm : language == "ru" ? conditionsRu : conditionsEn
 
@@ -23,6 +25,10 @@ import { useDarkMode } from "../../Context/darkmode";
 
         const toggleModal = () => {
             setModal(prev => !prev);
+        }
+
+        const showHide = () => {
+            setShow(!show)
         }
 
         const getInfo = useCallback((event) => {
@@ -74,9 +80,10 @@ import { useDarkMode } from "../../Context/darkmode";
                                 <span className="text-xs text-red-600">{data.error1}</span>
                             )}
                         </div>
-                        <div className="flex flex-col gap-1">
+                        <div className="flex flex-col relative gap-1">
                             <label htmlFor="password">{data.titleInputSecond}</label>
-                            <input type="password" autoComplete="current-password" ref={passwordUser} placeholder="**********" className={`border border-[#e3e8ec] placeholder:opacity-90 placeholder:text-[#233353] ${isDarkMode ? "bg-transparent text-white" : "bg-white"} focus:shadow-register transition-all duration-200 h-14 pl-2 rounded-xl outline-none" id="password`} />
+                            <input type={show ? "text" : "password"} autoComplete="current-password" ref={passwordUser} placeholder="**********" className={`border border-[#e3e8ec] placeholder:opacity-90 placeholder:text-[#233353] ${isDarkMode ? "bg-transparent text-white" : "bg-white"} focus:shadow-register transition-all duration-200 h-14 pl-2 rounded-xl outline-none" id="password`} />
+                            {show ? <FaEye onClick={showHide} className="absolute text-xl cursor-pointer right-4 top-11" /> : <FaEyeSlash className="absolute text-xl cursor-pointer right-4 top-11" onClick={showHide} /> }
                             {error && (
                                 <span className="text-xs text-red-600">{data.error2}</span>
                             )}
