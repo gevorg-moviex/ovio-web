@@ -750,3 +750,18 @@ export const specialOffersListsEn = {
         desc: "speed up to 300 Mb/s, 180+ channels, 25,000 movies and series for 3 months with 50% discount"
     }
 }
+
+export const telephonyEn = {
+    section: {
+        title: "Landline telephone",
+        desc: "Communicate with loved ones on high-quality telephony!",
+        imageUrl: "/Section/telephony.png",
+    },
+    content: {
+        title: "Fixline Comfort",
+        imageUrl: "/Bg/background-image.png",
+        content1: ["On Net", "300 min."],
+        content2: ["Monthly", "300 ֏"],
+        button: "Join Now"
+    }
+}

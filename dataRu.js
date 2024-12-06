@@ -777,3 +777,18 @@ export const specialOffersListsRu = {
         desc: "скорость до 300 Мбит/с, 180+ каналов, 25 000 фильмов и сериалов  со скидкой 50% на 3 месяца"
     }
 }
+
+export const telephonyRu = {
+    section: {
+        title: "Фиксированная телефонная связь",
+        desc: "Общайся с близкими по телефонии высокого качества!",
+        imageUrl: "/Section/telephony.png",
+    },
+    content: {
+        title: "Фикслайн Комфорт",
+        imageUrl: "/Bg/background-image.png",
+        content1: ["Внутри сети", "300 мин."],
+        content2: ["Ежемесячно", "300 ֏"],
+        button: "Подключись сейчас"
+    }
+}

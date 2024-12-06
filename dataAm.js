@@ -799,3 +799,18 @@ export const specialOffersListsAm = {
         desc: "մինչև 300 Մբ/վ արագություն, 180+ ալիք, 25 000 ֆիլմ և սերիալ 3 ամիս 50% զեղչով"
     }
 }
+
+export const telephonyAm = {
+    section: {
+        title: "Ֆիքսված հեռախոսակապ",
+        desc: "Շփվի՛ր մտերիմների հետ բարձրորակ հեռախոսակապով",
+        imageUrl: "/Section/telephony.png",
+    },
+    content: {
+        title: "Ֆիքսլայն Կոմֆորտ",
+        imageUrl: "/Bg/background-image.png",
+        content1: ["Ցանցի ներսում", "300 րոպե"],
+        content2: ["Ամսական", "300 ֏"],
+        button: "Միացի՛ր հիմա"
+    }
+}
