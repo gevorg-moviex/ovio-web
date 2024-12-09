@@ -73,10 +73,10 @@ export default function TopSide() {
                         </div>
                         {advancedDropdown && (
                             <div onMouseEnter={mouseAdvanced} onMouseLeave={mouseAdvancedLeave} className={`absolute z-50 right-10 top-6 bg-white rounded-xl shadow-topSide mt-1 transition-opacity duration-300`}>
-                                <ul className={`flex flex-col gap-4 w-64 p-4 ${isDarkMode ? "text-white bg-black rounded-xl" : "text-black"}`}>
+                                <ul className={`flex flex-col gap-4 text-sm w-64 p-4 ${isDarkMode ? "text-white bg-black rounded-xl" : "text-black"}`}>
                                     <li><Link to="/help">{language === "am" ? "Օգնություն" : language === "en" ? "Help" : language === "ru" ? "Помощь" : null}</Link></li>
                                     <li><Link to="/phoneService">{language === "am" ? "Հեռախոսային սպասարկում" : language === "en" ? "Telephone Service" : language === "ru" ? "Обслуживание по телефону" : null}</Link></li>
-                                    <li><a href="">{language === "am" ? "Աշխատատեղեր" : language === "en" ? "Vacancies" : language === "ru" ? "Вакансии" : null}</a></li>
+                                    <li><Link to="/vacancies">{language === "am" ? "Աշխատատեղեր" : language === "en" ? "Vacancies" : language === "ru" ? "Вакансии" : null}</Link></li>
                                 </ul>
                             </div>
                         )}

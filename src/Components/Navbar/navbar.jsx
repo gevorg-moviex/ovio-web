@@ -119,12 +119,12 @@ export default function Navbar(){
                         <span className={`border-b pb-1 w-full text-center text-base product660x:border-none product660x:w-0 border-gray-300 py-2 ${isDarkMode ? "bg-black text-white" : "bg-white text-black"} product640x:mt-0 product1260x:pt-0`}>{language === "am" ? "Մուտք" : language === "en" ? "Login" : language === "ru" ? "Вход" : null}</span>
                     </Link>
                         <div className="block w-full product660x:hidden">
-                            <button className="mt-3 bg-[#8c33e1] text-white hover:brightness-[120%] transition-all duration-300 cursor-pointer text-sm font-[600] w-full h-12 rounded-xl border-none outline-none tracking-wider">{language === "am" ? "Միացի՛ր հիմա" : language === "en" ? "Join Now" : language === "ru" ? "Подключись сейчас" : null}</button>
+                            <button className="mt-3 bg-[#53079d] text-white hover:brightness-[120%] transition-all duration-300 cursor-pointer text-sm font-[600] w-full h-12 rounded-xl border-none outline-none tracking-wider">{language === "am" ? "Միացի՛ր հիմա" : language === "en" ? "Join Now" : language === "ru" ? "Подключись сейчас" : null}</button>
                         </div>
                 </div>
             </div>
             <div className="flex gap-3">
-                <button className="hidden product660x:block bg-[#8c33e1] text-white hover:brightness-[120%] transition-all duration-300 cursor-pointer text-sm font-[600] min-w-60 h-12 rounded-xl border-none outline-none tracking-wider">{language === "am" ? "Միացի՛ր հիմա" : language === "en" ? "Join Now" : language === "ru" ? "Подключись сейчас" : null}</button>
+                <button className="hidden product660x:block bg-[#53079d] text-white hover:brightness-[120%] transition-all duration-300 cursor-pointer text-sm font-[600] min-w-60 h-12 rounded-xl border-none outline-none tracking-wider">{language === "am" ? "Միացի՛ր հիմա" : language === "en" ? "Join Now" : language === "ru" ? "Подключись сейчас" : null}</button>
                 <button onClick={toggleHamburger} className="block px-3 text-xl product1260x:hidden">
                     {hamburger ? <FaTimes /> : <FaBars />}
                 </button>

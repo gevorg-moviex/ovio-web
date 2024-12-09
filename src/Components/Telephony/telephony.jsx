@@ -57,7 +57,7 @@ export default function Telephony() {
                                     <span className="text-2xl product1100x:text-[42px]">{data.content.content2[1]}</span>
                                 </div>
                                 <div>
-                                    <button className={`border-none w-full outline-none ${isDarkMode ? "bg-[#04eed2] text-black" : "bg-[#53079d] #181818"} tracking-wide  rounded-xl py-3 product1100x:py-4 product1100x:px-24 hover:brightness-[140%] transition-all duration-300 text-sm font-semibold`}>
+                                    <button className={`border-none w-full outline-none ${isDarkMode ? "bg-[#04eed2] text-black" : "bg-[#53079d] text-white"} tracking-wide  rounded-xl py-3 product1100x:py-4 product1100x:px-24 hover:brightness-[140%] transition-all duration-300 text-sm font-semibold`}>
                                         {data.content.button}
                                     </button>
                                 </div>

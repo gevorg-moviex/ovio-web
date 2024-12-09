@@ -1,4 +1,4 @@
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import { sectionAm } from "../../../dataAm";
 import { sectionRu } from "../../../dataRu";
 import { sectionEn } from "../../../dataEn";
@@ -18,7 +18,8 @@ export default function Section() {
         <div className="w-full mt-14">
             <Swiper
                 pagination={{ clickable: true }}
-                modules={[Pagination]}
+                autoplay={{delay: 3000}}
+                modules={[Pagination, Autoplay]}
             >
                 {data.map(item => (
                     <SwiperSlide key={item.id}>

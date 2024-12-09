@@ -765,3 +765,84 @@ export const telephonyEn = {
         button: "Join Now"
     }
 }
+
+export const vacanciesEn = {
+    main: {
+        title: "Join our team",
+        desc: "We pay special attention to the development of productive work environment and the strong team to realize company’s goals. We welcome both newcomers and already experienced specialists and are ready to promote their professional development and growth. So we welcome purposeful and elaborative specialists, who can invest their professional skills and abilities in the company’s development. Check out our current vacancies down below. Join our team now!"
+    },
+    products: [
+        {
+            id: 1,
+            title: "Data Center Cooling and Air Conditioning Operations Engineer",
+            desc: "Any problem can be solved if it is dealt with by responsible, highly qualified personnel. We are waiting for you!",
+            button: "Learn more",
+            path: "Data-Center-Cooling-and-Air-Conditioning-Operations-Engineer",
+            available: "The main purpose of the position is technical maintenance and operation of data center cooling systems.",
+            availableBtn: "Apply",
+            workplace: "Abovyan, Kotayk",
+            deadline: "2024-11-22",
+            hours: ""
+        },
+        {
+            id: 2,
+            title: "Content Creator",
+            desc: "It's time to create at OVIO. We're waiting for your bright colors in our team.",
+            button: "Learn more",
+            path: "Content-Creator",
+            available: "The main purpose of the position is to create content for the Company's official social platforms and website. To join our team, send your resume to hr@ovio.am, indicating the name of the relevant vacancy. In this case - Content Creator. We will gladly consider your candidacy and contact you.",
+            availableBtn: "Apply",
+            workplace: "Yerevan, Abovyan",
+            deadline: "2024-11-22",
+            hours: "flexible schedule"
+        },
+        {
+            id: 3,
+            title: "Cable Engineer (Network Explotation)-Ijevan",
+            desc: "Join the team serving one of the largest networks in the country.",
+            button: "Learn more",
+            path: "Cable-Engineer-Network-Explotation-Ijevan",
+            available: "Please send your CV to hr@ovio.am e-mail address. You will be required to indicate the vacancy name in the letter subject field. We are happy to see you in our team.",
+            availableBtn: "Apply",
+            workplace: "Ijevan",
+            deadline: "2024-11-22",
+            hours: ""
+        },
+        {
+            id: 4,
+            title: "Retail Sales Specialist (Yerevan)",
+            desc: "Our mission is to help the customer find the best solution for him. Join the most active and dynamic sales team in Yerevan.",
+            button: "Learn more",
+            path: "Retail-Sales-Specialist-Yerevan",
+            available: "Please send your CV to hr@ovio.am e-mail address. You will be required to indicate the vacancy name in the letter subject field. We are happy to see you in our team.",
+            availableBtn: "Apply",
+            workplace: "Yerevan",
+            deadline: "2024-11-22",
+            hours: "10:00-19:00"
+        },
+        {
+            id: 5,
+            title: "Call center operator",
+            desc: "Our main task is to be admired by the customer and to create good memories for him. Are you ready for the challenge?",
+            button: "Learn more",
+            path: "Call-center-operator",
+            available: "Please send your CV to hr@ovio.am e-mail address. You will be required to indicate the vacancy name in the letter subject field. We are happy to see you in our team.",
+            availableBtn: "Apply",
+            workplace: "Abovyan",
+            deadline: "2024-11-22",
+            hours: "8 hours (with shifts)"
+        },
+        {
+            id: 6,
+            title: "Cable Engineer (Network Explotation)-Yerevan",
+            desc: "Join the team serving one of the largest networks in the country.",
+            button: "Learn more",
+            path: "Cable-Engineer-Network-Explotation-Yerevan",
+            available: "Please send your CV to hr@ovio.am e-mail address. You will be required to indicate the vacancy name in the letter subject field. We are happy to see you in our team.",
+            availableBtn: "Apply",
+            workplace: "Yerevan City, Abovyan city and surrounding areas",
+            deadline: "2024-11-22",
+            hours: "09:30 - 18:00"
+        }
+    ] 
+}

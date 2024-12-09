@@ -49,6 +49,7 @@ export default {
         "headerBottom": "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
         "register": "0 0 0 .2rem rgba(83, 7, 157, .25)",
         "phoneService" : "0 8px 30px 0 rgba(0, 0, 0, .15)",
+        "vacancies": "0 8px 30px 0 rgba(0, 0, 0, .15)"
       },
       gridAutoColumns: {
         "3xauto": "repeat(3, auto)",

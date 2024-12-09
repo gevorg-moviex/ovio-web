@@ -13,6 +13,9 @@ import { DarkModeProvider } from './Context/darkmode';
 import SubscribersPage from './Pages/subscribersPage';
 import PhoneServicePage from './Pages/phoneSevicePage';
 import TelephonyPage from './Pages/telephonyPage';
+import VacanciesPage from './Pages/vacanciesPage';
+import VacancieItem from './Components/VacancieItem/vacancieItem';
+import VacanciesItemPage from './Pages/vacanciesItemPage';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -46,6 +49,8 @@ function App() {
                 <Route path="/subscribers" element={isLoggedIn ? <SubscribersPage /> : <Navigate to="/login" />} />
                 <Route path="/phoneService" element={isLoggedIn ? <PhoneServicePage /> : <Navigate to="/login" />} />
                 <Route path="/telephony" element={isLoggedIn ? <TelephonyPage /> : <Navigate to="/login" />} />
+                <Route path="/vacancies" element={isLoggedIn ? <VacanciesPage /> : <Navigate to="/login" />} />
+                <Route path="/vacancies/:category" element={<VacanciesItemPage />} />
               </Routes> 
             }
           </DarkModeProvider>
