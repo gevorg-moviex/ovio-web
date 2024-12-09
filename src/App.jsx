@@ -14,7 +14,6 @@ import SubscribersPage from './Pages/subscribersPage';
 import PhoneServicePage from './Pages/phoneSevicePage';
 import TelephonyPage from './Pages/telephonyPage';
 import VacanciesPage from './Pages/vacanciesPage';
-import VacancieItem from './Components/VacancieItem/vacancieItem';
 import VacanciesItemPage from './Pages/vacanciesItemPage';
 
 function App() {
