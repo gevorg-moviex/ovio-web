@@ -15,7 +15,7 @@ export default function Telephony() {
         <div>
             <div>
                 <div className={`flex ${isDarkMode ? "bg-black" : "bg-[#53079D]"} h-[710px] product590x:h-[800px] items-center justify-center overflow-hidden product1255x:justify-start gap-11`}>
-                    <div className="w-[70%] text-center items-center product590x:text-left product590x:items-start product1255x:w-[40%] product1255x:pl-20 product1370x:pl-32    flex flex-col gap-9 justify-center">
+                    <div className="w-[70%] text-center items-center product590x:text-left product590x:items-start product1255x:w-[40%] product1255x:pl-20 product1370x:pl-32 flex flex-col gap-9 justify-center">
                         <span className="text-5xl product590x:text-6xl text-[#04eed2]">{data.section.title}</span>
                         <p className="font-normal text-white">{data.section.desc}</p>
                     </div>

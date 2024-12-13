@@ -8,7 +8,6 @@ export default {
     extend: {
       screens: {
         "product1770x": "1770px",
-        "product1770x": "1455px",
         "product1520x": "1520px",
         "product1465x": "1465px",
         "product1420x": "1420px",

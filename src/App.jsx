@@ -15,6 +15,7 @@ import PhoneServicePage from './Pages/phoneSevicePage';
 import TelephonyPage from './Pages/telephonyPage';
 import VacanciesPage from './Pages/vacanciesPage';
 import VacanciesItemPage from './Pages/vacanciesItemPage';
+import HappyWeekendPage from './Pages/happyWeekend';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -49,7 +50,8 @@ function App() {
                 <Route path="/phoneService" element={isLoggedIn ? <PhoneServicePage /> : <Navigate to="/login" />} />
                 <Route path="/telephony" element={isLoggedIn ? <TelephonyPage /> : <Navigate to="/login" />} />
                 <Route path="/vacancies" element={isLoggedIn ? <VacanciesPage /> : <Navigate to="/login" />} />
-                <Route path="/vacancies/:category" element={<VacanciesItemPage />} />
+                <Route path="/vacancies/:category" element={isLoggedIn ? <VacanciesItemPage /> : <Navigate to="/login" /> } />
+                <Route path="/happyWeekend" element={isLoggedIn ? <HappyWeekendPage /> : <Navigate to="/login" /> } />
               </Routes> 
             }
           </DarkModeProvider>
