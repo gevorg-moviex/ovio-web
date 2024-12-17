@@ -846,3 +846,36 @@ export const vacanciesEn = {
         }
     ] 
 }
+
+export const happyWeekendEn = {
+    section: {
+        title: "Weekends are fun with OVIO",
+        desc: "the weekend at new speeds",
+        imageUrl: "/Section/section-6.png",
+    },
+    items: {
+        title: "Happy Weekend",
+        desc: "We want to make your weekend more dynamic... Special offer “Happy weekend” for our beloved subscribers. Enjoy new speeds and make your weekend more enjoyable! How it works: Pay on time Make sure your internet is paid for by the due date Enjoy new speeds What about us? Every weekend we will add 20 Mbps to your current Internet speed at no additional charge. Watch movies, download whatever you want and just enjoy your weekend ♡ We want our subscribers to feel valued.",
+        items: [
+            {
+                iconUrl: "/HappyWeekend/icon-1.png",
+                title: "Pay for the services you use",
+                desc: "until the 15th of every month",
+            },
+            {
+                iconUrl: "/HappyWeekend/icon-2.png",
+                title: "get +20 Mbps internet speed",
+                desc: "automatically added to your package speed",
+            },{
+                iconUrl: "/HappyWeekend/icon-3.png",
+                title: "Enjoy your weekend at new speeds",
+                desc: "watch movies, series with a faster internet connection",
+            },
+        ],
+        conditions: {
+            title: "Conditions",
+            desc: "Only physical entities can take advantage of the “Happy Weekend” offer.",
+            available: "GPON technology provides unrestricted symmetric Internet access up to the speeds specified in the tariff plans (maximum speed 800 Mb/s) via a wired connection. The WiFi connection speed is due to the technical capability of the device/devices used by the subscriber. Terms"
+        }
+    },
+}

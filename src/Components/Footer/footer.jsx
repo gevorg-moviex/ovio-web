@@ -5,6 +5,7 @@ import { footerLinksRu } from "../../../dataRu";
 import { useLanguage } from "../../Context/language";
 import { Link } from "react-router-dom";
 import { useDarkMode } from "../../Context/darkmode";
+import Contact from "../../utils/footerContact";
 
 export default function Footer(){
     const {language} = useLanguage();
